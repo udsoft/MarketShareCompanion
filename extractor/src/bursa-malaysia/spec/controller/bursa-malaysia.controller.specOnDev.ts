@@ -1,5 +1,5 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { BursaMalaysiaController } from '../bursa-malaysia.controller';
+import { BursaMalaysiaController } from '../../bursa-malaysia.controller';
 
 describe('BursaMalaysia Controller', () => {
   let controller: BursaMalaysiaController;

@@ -1,0 +1,3197 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<!-- To use your snippet, just add the following code in your page template-->
+<!-- {% include header %} -->
+
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1.0, shrink-to-fit=no, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <script>window.NREUM || (NREUM = {}); NREUM.info = { "beacon": "bam.nr-data.net", "errorBeacon": "bam.nr-data.net", "licenseKey": "082b79809b", "applicationID": "269676066", "transactionName": "cVZYFUtfD1lVRh5mBFFSGS1WUwxYX0BYQgAIA2UVXFEODwp5WFABXlxBAEtVEA8KZlRaAVdLUxMWUwJZXA==", "queueTime": 0, "applicationTime": 290, "agent": "" }</script>
+  <script>(window.NREUM || (NREUM = {})).loader_config = { licenseKey: "082b79809b", applicationID: "269676066" }; window.NREUM || (NREUM = {}), __nr_require = function (e, n, t) { function r(t) { if (!n[t]) { var i = n[t] = { exports: {} }; e[t][0].call(i.exports, function (n) { var i = e[t][1][n]; return r(i || n) }, i, i.exports) } return n[t].exports } if ("function" == typeof __nr_require) return __nr_require; for (var i = 0; i < t.length; i++)r(t[i]); return r }({ 1: [function (e, n, t) { function r() { } function i(e, n, t) { return function () { return o(e, [u.now()].concat(f(arguments)), n ? null : this, t), n ? void 0 : this } } var o = e("handle"), a = e(4), f = e(5), c = e("ee").get("tracer"), u = e("loader"), s = NREUM; "undefined" == typeof window.newrelic && (newrelic = s); var p = ["setPageViewName", "setCustomAttribute", "setErrorHandler", "finished", "addToTrace", "inlineHit", "addRelease"], l = "api-", d = l + "ixn-"; a(p, function (e, n) { s[n] = i(l + n, !0, "api") }), s.addPageAction = i(l + "addPageAction", !0), s.setCurrentRouteName = i(l + "routeName", !0), n.exports = newrelic, s.interaction = function () { return (new r).get() }; var m = r.prototype = { createTracer: function (e, n) { var t = {}, r = this, i = "function" == typeof n; return o(d + "tracer", [u.now(), e, t], r), function () { if (c.emit((i ? "" : "no-") + "fn-start", [u.now(), r, i], t), i) try { return n.apply(this, arguments) } catch (e) { throw c.emit("fn-err", [arguments, this, e], t), e } finally { c.emit("fn-end", [u.now()], t) } } } }; a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","), function (e, n) { m[n] = i(d + n) }), newrelic.noticeError = function (e, n) { "string" == typeof e && (e = new Error(e)), o("err", [e, u.now(), !1, n]) } }, {}], 2: [function (e, n, t) { function r(e, n) { var t = e.getEntries(); t.forEach(function (e) { "first-paint" === e.name ? c("timing", ["fp", Math.floor(e.startTime)]) : "first-contentful-paint" === e.name && c("timing", ["fcp", Math.floor(e.startTime)]) }) } function i(e, n) { var t = e.getEntries(); t.length > 0 && c("lcp", [t[t.length - 1]]) } function o(e) { if (e instanceof s && !l) { var n, t = Math.round(e.timeStamp); n = t > 1e12 ? Date.now() - t : u.now() - t, l = !0, c("timing", ["fi", t, { type: e.type, fid: n }]) } } if (!("init" in NREUM && "page_view_timing" in NREUM.init && "enabled" in NREUM.init.page_view_timing && NREUM.init.page_view_timing.enabled === !1)) { var a, f, c = e("handle"), u = e("loader"), s = NREUM.o.EV; if ("PerformanceObserver" in window && "function" == typeof window.PerformanceObserver) { a = new PerformanceObserver(r), f = new PerformanceObserver(i); try { a.observe({ entryTypes: ["paint"] }), f.observe({ entryTypes: ["largest-contentful-paint"] }) } catch (p) { } } if ("addEventListener" in document) { var l = !1, d = ["click", "keydown", "mousedown", "pointerdown", "touchstart"]; d.forEach(function (e) { document.addEventListener(e, o, !1) }) } } }, {}], 3: [function (e, n, t) { function r(e, n) { if (!i) return !1; if (e !== i) return !1; if (!n) return !0; if (!o) return !1; for (var t = o.split("."), r = n.split("."), a = 0; a < r.length; a++)if (r[a] !== t[a]) return !1; return !0 } var i = null, o = null, a = /Version\/(\S+)\s+Safari/; if (navigator.userAgent) { var f = navigator.userAgent, c = f.match(a); c && f.indexOf("Chrome") === -1 && f.indexOf("Chromium") === -1 && (i = "Safari", o = c[1]) } n.exports = { agent: i, version: o, match: r } }, {}], 4: [function (e, n, t) { function r(e, n) { var t = [], r = "", o = 0; for (r in e) i.call(e, r) && (t[o] = n(r, e[r]), o += 1); return t } var i = Object.prototype.hasOwnProperty; n.exports = r }, {}], 5: [function (e, n, t) { function r(e, n, t) { n || (n = 0), "undefined" == typeof t && (t = e ? e.length : 0); for (var r = -1, i = t - n || 0, o = Array(i < 0 ? 0 : i); ++r < i;)o[r] = e[n + r]; return o } n.exports = r }, {}], 6: [function (e, n, t) { n.exports = { exists: "undefined" != typeof window.performance && window.performance.timing && "undefined" != typeof window.performance.timing.navigationStart } }, {}], ee: [function (e, n, t) { function r() { } function i(e) { function n(e) { return e && e instanceof r ? e : e ? c(e, f, o) : o() } function t(t, r, i, o) { if (!l.aborted || o) { e && e(t, r, i); for (var a = n(i), f = v(t), c = f.length, u = 0; u < c; u++)f[u].apply(a, r); var p = s[y[t]]; return p && p.push([b, t, r, a]), a } } function d(e, n) { h[e] = v(e).concat(n) } function m(e, n) { var t = h[e]; if (t) for (var r = 0; r < t.length; r++)t[r] === n && t.splice(r, 1) } function v(e) { return h[e] || [] } function g(e) { return p[e] = p[e] || i(t) } function w(e, n) { u(e, function (e, t) { n = n || "feature", y[t] = n, n in s || (s[n] = []) }) } var h = {}, y = {}, b = { on: d, addEventListener: d, removeEventListener: m, emit: t, get: g, listeners: v, context: n, buffer: w, abort: a, aborted: !1 }; return b } function o() { return new r } function a() { (s.api || s.feature) && (l.aborted = !0, s = l.backlog = {}) } var f = "nr@context", c = e("gos"), u = e(4), s = {}, p = {}, l = n.exports = i(); l.backlog = s }, {}], gos: [function (e, n, t) { function r(e, n, t) { if (i.call(e, n)) return e[n]; var r = t(); if (Object.defineProperty && Object.keys) try { return Object.defineProperty(e, n, { value: r, writable: !0, enumerable: !1 }), r } catch (o) { } return e[n] = r, r } var i = Object.prototype.hasOwnProperty; n.exports = r }, {}], handle: [function (e, n, t) { function r(e, n, t, r) { i.buffer([e], r), i.emit(e, n, t) } var i = e("ee").get("handle"); n.exports = r, r.ee = i }, {}], id: [function (e, n, t) { function r(e) { var n = typeof e; return !e || "object" !== n && "function" !== n ? -1 : e === window ? 0 : a(e, o, function () { return i++ }) } var i = 1, o = "nr@id", a = e("gos"); n.exports = r }, {}], loader: [function (e, n, t) { function r() { if (!x++) { var e = E.info = NREUM.info, n = d.getElementsByTagName("script")[0]; if (setTimeout(s.abort, 3e4), !(e && e.licenseKey && e.applicationID && n)) return s.abort(); u(y, function (n, t) { e[n] || (e[n] = t) }), c("mark", ["onload", a() + E.offset], null, "api"); var t = d.createElement("script"); t.src = "https://" + e.agent, n.parentNode.insertBefore(t, n) } } function i() { "complete" === d.readyState && o() } function o() { c("mark", ["domContent", a() + E.offset], null, "api") } function a() { return O.exists && performance.now ? Math.round(performance.now()) : (f = Math.max((new Date).getTime(), f)) - E.offset } var f = (new Date).getTime(), c = e("handle"), u = e(4), s = e("ee"), p = e(3), l = window, d = l.document, m = "addEventListener", v = "attachEvent", g = l.XMLHttpRequest, w = g && g.prototype; NREUM.o = { ST: setTimeout, SI: l.setImmediate, CT: clearTimeout, XHR: g, REQ: l.Request, EV: l.Event, PR: l.Promise, MO: l.MutationObserver }; var h = "" + location, y = { beacon: "bam.nr-data.net", errorBeacon: "bam.nr-data.net", agent: "js-agent.newrelic.com/nr-1169.min.js" }, b = g && w && w[m] && !/CriOS/.test(navigator.userAgent), E = n.exports = { offset: f, now: a, origin: h, features: {}, xhrWrappable: b, userAgent: p }; e(1), e(2), d[m] ? (d[m]("DOMContentLoaded", o, !1), l[m]("load", r, !1)) : (d[v]("onreadystatechange", i), l[v]("onload", r)), c("mark", ["firstbyte", f], null, "api"); var x = 0, O = e(6) }, {}], "wrap-function": [function (e, n, t) { function r(e) { return !(e && e instanceof Function && e.apply && !e[a]) } var i = e("ee"), o = e(5), a = "nr@original", f = Object.prototype.hasOwnProperty, c = !1; n.exports = function (e, n) { function t(e, n, t, i) { function nrWrapper() { var r, a, f, c; try { a = this, r = o(arguments), f = "function" == typeof t ? t(r, a) : t || {} } catch (u) { l([u, "", [r, a, i], f]) } s(n + "start", [r, a, i], f); try { return c = e.apply(a, r) } catch (p) { throw s(n + "err", [r, a, p], f), p } finally { s(n + "end", [r, a, c], f) } } return r(e) ? e : (n || (n = ""), nrWrapper[a] = e, p(e, nrWrapper), nrWrapper) } function u(e, n, i, o) { i || (i = ""); var a, f, c, u = "-" === i.charAt(0); for (c = 0; c < n.length; c++)f = n[c], a = e[f], r(a) || (e[f] = t(a, u ? f + i : i, o, f)) } function s(t, r, i) { if (!c || n) { var o = c; c = !0; try { e.emit(t, r, i, n) } catch (a) { l([a, t, r, i]) } c = o } } function p(e, n) { if (Object.defineProperty && Object.keys) try { var t = Object.keys(e); return t.forEach(function (t) { Object.defineProperty(n, t, { get: function () { return e[t] }, set: function (n) { return e[t] = n, n } }) }), n } catch (r) { l([r]) } for (var i in e) f.call(e, i) && (n[i] = e[i]); return n } function l(n) { try { e.emit("internal-error", n) } catch (t) { } } return e || (e = i), t.inPlace = u, t.flag = a, t } }, {}] }, {}, ["loader"]);</script>
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="descriptions" content="" />
+  <meta name="keywords" content="Equities Prices, prices, stocks, price, equity, Equities, Price, stock" />
+  <link rel="apple-touch-icon" sizes="180x180"
+    href="/sites/5bb54be15f36ca0af339077a/theme/images/favicons/apple-touch-icon.png?1590549628">
+  <link rel="icon" type="image/png" sizes="32x32"
+    href="/sites/5bb54be15f36ca0af339077a/theme/images/favicons/favicon-32x32.png?1590549628">
+  <link rel="icon" type="image/png" sizes="16x16"
+    href="/sites/5bb54be15f36ca0af339077a/theme/images/favicons/favicon-16x16.png?1590549628">
+  <!--
+  <link rel="manifest" href="/sites/5bb54be15f36ca0af339077a/theme/images/favicons/site.webmanifest?1590549628">
+  -->
+  <link rel="mask-icon" href="/sites/5bb54be15f36ca0af339077a/theme/images/favicons/safari-pinned-tab.svg?1590549628"
+    color="#2c3283">
+  <link rel="shortcut icon" href="/sites/5bb54be15f36ca0af339077a/theme/images/favicons/favicon.ico?1590549628">
+  <meta name="msapplication-TileColor" content="#2c3283">
+  <meta name="theme-color" content="#ffffff">
+
+  <meta name="csrf-param" content="authenticity_token" />
+  <meta name="csrf-token"
+    content="e3cKYLh7CbBcWGyRbvyipsGHJQsz3QnXKPk41up2gDfr/k4IKD0qQ/0V0ahHJOGvGogkdQl/zfy4VJ+c/vykuw==" />
+
+
+
+  <title>Equities Prices</title>
+
+
+  <!-- vue app / move to engine after yarn for both js and css-->
+  <link rel="stylesheet" type="text/css" href="/assets/bursaweb.css?v=2" />
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-147934313-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-147934313-1');
+  </script>
+  <link rel="stylesheet" type="text/css"
+    href="/assets/locomotive/wysihtml5_editor-fc29194a42477130c74586bdf96c1223ad3616f4b8c3218250e3be5ebb393a3f.css">
+</head>
+
+
+<body class="preload">
+
+
+
+
+
+  <!-- To use your snippet, just add the following code in your page template-->
+  <!-- {% include header_menu %} -->
+
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script>
+    function toHomeIntro() {
+      window.location.href = '/?multipage=true';
+    }
+
+    function toHomeIntro_m() {
+      window.location.href = '/?mobilepage=true';
+    }
+  </script>
+  <div id='above-header'></div>
+  <header>
+    <div class="cbp-af-header">
+      <div class="cbp-af-inner">
+        <div id="main-bar">
+          <div class="container ">
+            <a href="/" class="d-none d-lg-inline-block" id="logo">
+              <img src="/sites/5bb54be15f36ca0af339077a/theme/images/logo.png?1590549628" class="logo"
+                alt="BURSA MALAYSIA" />
+            </a>
+
+            <div id="sub-nav" class="float-right">
+              <div class="d-inline-block mr-1 pr-2 border-right border-secondary">
+                <a id="company_announcements_main" href="/market_information/announcements/company_announcement"
+                  class="btn btn-red btn-sm upper">
+                  <span>
+                    Company Announcements
+                  </span>
+                </a>
+              </div>
+              <div class="d-inline-block mr-1 pr-2 border-right border-secondary" onclick="toHomeIntro()">
+                <a id="get_started" href=# class="btn btn-red btn-sm upper">
+                  <span>
+                    <img src="/sites/5bb54be15f36ca0af339077a/theme/images/icon-guided-tour.svg?1590549628"
+                      class="guided-tour-icon" />
+                    Guided Tour
+                  </span>
+                </a>
+              </div>
+              <div class="d-inline-block mr-1 pr-2">
+                <a id="search_button" href="#" class="search-trigger btn btn-sm btn-grey">
+                  <i class="fa fas fa-search"></i>
+                </a>
+                <a id="lang_button" href="#" class="lang-trigger btn btn-sm btn-grey ">
+                  EN
+                </a>
+              </div>
+            </div>
+
+            <div id="second-nav" class="float-right">
+              <nav class="navbar navbar-expand-lg navbar-dark yamm">
+                <a class="navbar-brand d-lg-none" href="/" id="logo_m">
+                  <img src="/sites/5bb54be15f36ca0af339077a/theme/images/logo.png?1590549628" class="logo"
+                    alt="BURSA MALAYSIA" />
+                </a>
+                <div class="row lang-search justify-content-end">
+                  <div class="col-6 lang-div">
+                    <a id="search_button_m" href="#" class="search-trigger btn btn-sm btn-grey btn-block">
+                      <i class="fa fas fa-search"></i>
+                    </a>
+                  </div>
+                  <div class="col-6 lang-div">
+                    <a id="lang_button_m" href="#" class="lang-trigger btn btn-sm btn-grey btn-block">EN</a>
+                  </div>
+                </div>
+                <button class="navbar-toggler" id="hamburger_menu" type="button" data-toggle="collapse"
+                  data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                  aria-label="Toggle navigation">
+                  <i class="material-icons">menu</i>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown yamm-fullwidth">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Market Information
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <div class="yamm-content container">
+                            <ul class="list-unstyled">
+                              <li class="nav-item ">
+                                <a class="nav-link subtitle" href="/market_information/equities_prices">
+                                  Equities Prices
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link subtitle" href="/market_information/indices_prices">
+                                  Indices
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link subtitle" href="/market_information/bonds_prices">
+                                  Bonds Prices
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link subtitle" href="/market_information/derivatives_prices">
+                                  Derivatives Prices
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link subtitle"
+                                  href="/market_information/shariah_compliant_equities_prices">
+                                  Shariah Compliant Equities Prices
+                                </a>
+                              </li>
+                            </ul>
+
+                            <ul class="list-unstyled">
+                              <li class="nav-item ">
+                                <a class="nav-link subtitle" href="/market_information/market_statistic">
+                                  Market Statistics
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/market_information/market_statistic/securities">
+                                  Securities
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/market_information/market_statistic/bond">
+                                  Bonds
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/market_information/market_statistic/derivatives">
+                                  Derivatives
+                                </a>
+                              </li>
+                              <!-- <li class="nav-item ">
+                                <a class="nav-link" href="/market_information/market_statistic/ipo_performance">
+                                  IPO Performance
+                                </a>
+                              </li> -->
+                            </ul>
+                            <ul class="list-unstyled">
+                              <li class="nav-item ">
+                                <a class="nav-link subtitle" href="/market_information/market_data">
+                                  Market Data
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/market_information/market_data/information_services_license">
+                                  Information Services License
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/market_information/market_data/website_linking_service">
+                                  Website Linking Service
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/market_information/market_data/historical_data_packages">
+                                  Historical Data Packages
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/market_information/market_data/information_vendors">
+                                  Information Vendors
+                                </a>
+                              </li>
+                            </ul>
+                            <ul class="list-unstyled">
+                              <li class="nav-item ">
+                                <a class="nav-link subtitle" href="/market_information/announcements">
+                                  Announcements
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/market_information/announcements/company_announcement">
+                                  Company Announcements
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/market_information/announcements/structure_warrants">
+                                  Structured Warrants
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/market_information/announcements/entitlement_by_ex_date">
+                                  Entitlement by Ex-Date
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/market_information/announcements/speeds">
+                                  SPEEDS
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item dropdown yamm-fullwidth">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Trade
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <div class="yamm-content container">
+                            <ul class="list-unstyled">
+                              <li class="nav-item ">
+                                <a class="nav-link subtitle" href="/trade/market">
+                                  Market
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/trade/market/securities_market">
+                                  Securities Market
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/trade/market/derivatives_market">
+                                  Derivatives Market
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/trade/market/islamic_market">
+                                  Islamic Markets
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link"
+                                  href="/trade/market/labuan_international_financial_exchange?instrument_type=All&status=Active">
+                                  Labuan International Financial Exchange (LFX)
+                                </a>
+                              </li>
+                            </ul>
+                            <ul class="list-unstyled">
+                              <li class="nav-item ">
+                                <a class="nav-link subtitle" href="/trade/our_products_services">
+                                  Our Product & Services
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/trade/our_products_services/equities/shares">
+                                  Equities
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link"
+                                  href="/trade/our_products_services/bonds/exchange_traded_bonds_and_sukuk">
+                                  Bonds
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/trade/our_products_services/derivatives/company_profile">
+                                  Derivatives
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link"
+                                  href="/trade/our_products_services/islamic_market/bursa_suq_al_sila">
+                                  Islamic Markets
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link"
+                                  href="/trade/our_products_services/indices/bursa_malaysia_index_series">
+                                  Indices
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/trade/our_products_services/lfx/about_the_exchange">
+                                  Labuan International Financial Exchange (LFX)
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/trade/our_products_services/co_location_services">
+                                  Co-Location Service
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/trade/our_products_services/bts2_on_boarding">
+                                  BTS2 On-Boarding
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link"
+                                  href="/trade/our_products_services/network_access_and_infrastructure_services/network_access">
+                                  Network Access and Infrastructure Services (NAIS)
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link"
+                                  href="/trade/our_products_services/central_depository_system/overview">
+                                  Central Depository System (CDS)
+                                </a>
+                              </li>
+                            </ul>
+                            <ul class="list-unstyled">
+                              <li class="nav-item ">
+                                <a class="nav-link subtitle" href="/trade/trading_resources">
+                                  Trading Resources
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/trade/trading_resources/listing_directory/main_market">
+                                  Listing Directory
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/trade/trading_resources/equities/trading_procedures">
+                                  Equities
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link"
+                                  href="/trade/trading_resources/brokers_for_equities/list_of_participating_organisations">
+                                  Brokers for Equities
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/trade/trading_resources/non_broker_participants/adm">
+                                  Non Broker Participants
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/trade/trading_resources/bonds/instruments_traded">
+                                  Bonds
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/trade/trading_resources/brokers_for_bonds">
+                                  Brokers for Bonds
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/trade/trading_resources/derivatives/trading_procedures">
+                                  Derivatives
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link"
+                                  href="/trade/trading_resources/brokers_for_derivatives/list_of_trading_participants">
+                                  Brokers for Derivatives
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/trade/trading_resources/islamic_markets/trading_session">
+                                  Islamic Markets
+                                </a>
+                              </li>
+                            </ul>
+                            <ul class="list-unstyled">
+                              <li class="nav-item ">
+                                <a class="nav-link subtitle" href="/trade/post_trade">
+                                  Post Trade
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link"
+                                  href="/trade/post_trade/securities_borrowing_lending/negotiated_transaction">
+                                  Securities Borrowing & Lending (SBL)
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/trade/post_trade/issbnt">
+                                  Islamic Securities Selling & Buying Negotiated Transaction (ISSBNT)
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/trade/post_trade/securities-clearing-and-settlement">
+                                  Securities Clearing & Settlement
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/trade/post_trade/derivatives_clearing_and_settlement">
+                                  Derivatives Clearing & Settlement
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/trade/post_trade/transaction_costs_fees_charges">
+                                  Transaction Costs, Fees and Changes
+                                </a>
+                              </li>
+
+                              <li class="nav-item mt-3">
+                                <a class="nav-link subtitle" href="/trade/risk_and_compliance">
+                                  Risk & Compliance
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/trade/risk_and_compliance/overview">
+                                  Overview
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/trade/risk_and_compliance/risk_compliance_framework">
+                                  Risk & Compliance Framework
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link"
+                                  href="/trade/risk_and_compliance/bmsc_and_bmdc_as_central_counterparty_ccp">
+                                  BMSC and BMDC as Central Counterparty (CCP)
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/trade/risk_and_compliance/pfmi_disclosure">
+                                  PFMI Disclosure
+                                </a>
+                              </li>
+
+                              <li class="nav-item mt-3">
+                                <a class="nav-link subtitle" href="/trade/sst">
+                                  SST
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item dropdown yamm-fullwidth">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Listing
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <div class="yamm-content container">
+                            <ul class="list-unstyled">
+                              <li class="nav-item ">
+                                <a class="nav-link subtitle" href="/listing/why_bursa_malaysia">
+                                  Why Bursa Malaysia
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/listing/why_bursa_malaysia/your_listing_destination">
+                                  Your Listing Destination
+                                </a>
+                              </li>
+
+
+                              <li class="nav-item mt-3">
+                                <a class="nav-link subtitle" href="/listing/get_listed">
+                                  Get Listed
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/listing/get_listed/listing_criteria">
+                                  Listing Criteria
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/listing/get_listed/listing_process">
+                                  Listing Process
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/listing/get_listed/cost_of_listing">
+                                  Cost of Listing
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/listing/get_listed/fees_and_charges/main_market">
+                                  Fees and Charges
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/listing/get_listed/issuer_services">
+                                  Issuer Services
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link"
+                                  href="/listing/get_listed/list_of_approved_continuing_advisers_for_leap">
+                                  Advisers / Sponsors
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/listing/get_listed/supporting_partners">
+                                  Supporting Partners
+                                </a>
+                              </li>
+                            </ul>
+                            <ul class="list-unstyled">
+                              <li class="nav-item ">
+                                <a class="nav-link subtitle" href="/listing/listing_resources">
+                                  Listing Resources
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/listing/listing_resources/ipo/ipo_summary">
+                                  IPO
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/listing/listing_resources/ipo_prospectus">
+                                  IPO Prospectus
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/listing/listing_resources/lfx_prospectus/lfx_prospectus">
+                                  LFX Prospectus
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link"
+                                  href="/listing/listing_resources/corporate_governance_sustainability"
+                                  data-toggle="modal" data-target="#bursasustain_modal">
+                                  Corporate Governance and Sustainability
+                                </a>
+                              </li>
+
+                            </ul>
+                            <ul class="list-unstyled">
+                              <li class="nav-item ">
+                                <a class="nav-link subtitle" href="/listing/lfx">
+                                  Labuan International Financial Exchange (LFX)
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/listing/lfx/market_participants">
+                                  Market Participants
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/listing/lfx/listing_sponsors_list">
+                                  Listing Sponsors List
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/listing/lfx/issuers">
+                                  Issuers
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/listing/lfx/financial_instruments">
+                                  Financial Instruments
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/listing/lfx/fees">
+                                  Fees
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/listing/lfx/business_process">
+                                  Business Process
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item dropdown yamm-fullwidth squeeze-nav-item">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Regulation
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <div class="yamm-content container">
+                            <div class="row">
+                              <div class="col-lg-3">
+                                <ul class="list-unstyled">
+                                  <li class="nav-item ">
+                                    <a class="nav-link subtitle" href="/regulation">
+                                      Overview
+                                    </a>
+                                  </li>
+                                  <li class="nav-item mt-3">
+                                    <a class="nav-link subtitle" href="/regulation/structure">
+                                      Structure
+                                    </a>
+                                  </li>
+                                  <li class="nav-item ">
+                                    <a class="nav-link" href="/regulation/structure/overview">
+                                      Overview
+                                    </a>
+                                  </li>
+                                  <li class="nav-item ">
+                                    <a class="nav-link" href="/regulation/structure/regulatory_committees">
+                                      Regulatory Committees
+                                    </a>
+                                  </li>
+                                  <li class="nav-item ">
+                                    <a class="nav-link" href="/regulation/structure/regulatory_oversight_body">
+                                      Regulatory Oversight Body
+                                    </a>
+                                  </li>
+                                  <li class="nav-item ">
+                                    <a class="nav-link" href="/regulation/structure/overview_of_rules">
+                                      Overview of Rules
+                                    </a>
+                                  </li>
+                                  <li class="nav-item ">
+                                    <a class="nav-link" href="/regulation/structure/rules_making_process">
+                                      Rules Making Process
+                                    </a>
+                                  </li>
+                                  <li class="nav-item mt-3">
+                                    <a class="nav-link subtitle" href="/regulation/about_bursa_malaysia_regulatory">
+                                      About Bursa Malaysia Regulatory
+                                    </a>
+                                  </li>
+                                  <li class="nav-item ">
+                                    <a class="nav-link"
+                                      href="/regulation/about_bursa_malaysia_regulatory/regulatory_approach_philosophy">
+                                      Regulatory Approach/Philosophy
+                                    </a>
+                                  </li>
+                                  <li class="nav-item ">
+                                    <a class="nav-link"
+                                      href="/regulation/about_bursa_malaysia_regulatory/supervision_of_issuers">
+                                      Supervision of Issuers
+                                    </a>
+                                  </li>
+                                  <li class="nav-item ">
+                                    <a class="nav-link"
+                                      href="/regulation/about_bursa_malaysia_regulatory/supervision_of_brokers">
+                                      Supervision of Brokers
+                                    </a>
+                                  </li>
+                                  <li class="nav-item ">
+                                    <a class="nav-link" href="/regulation/about_bursa_malaysia_regulatory/enforcement">
+                                      Enforcement
+                                    </a>
+                                  </li>
+                                  <li class="nav-item ">
+                                    <a class="nav-link"
+                                      href="/regulation/about_bursa_malaysia_regulatory/market_surveillance">
+                                      Market Surveillance
+                                    </a>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="col-lg-3">
+                                <ul class="list-unstyled">
+                                  <li class="nav-item">
+                                    <a class="nav-link subtitle" href="/regulation/listing_requirements">
+                                      Listing Requirements
+                                    </a>
+                                  </li>
+                                  <li class="nav-item ">
+                                    <a class="nav-link" href="/regulation/listing_requirements/main_market">
+                                      Main Market
+                                    </a>
+                                  </li>
+                                  <li class="nav-item ">
+                                    <a class="nav-link" href="/regulation/listing_requirements/ace_market">
+                                      ACE Market
+                                    </a>
+                                  </li>
+                                  <li class="nav-item ">
+                                    <a class="nav-link" href="/regulation/listing_requirements/leap_market">
+                                      LEAP Market
+                                    </a>
+                                  </li>
+                                  <li class="nav-item ">
+                                    <a class="nav-link" href="/regulation/listing_requirements/faqs/general">
+                                      FAQs
+                                    </a>
+                                  </li>
+                                  <li class="nav-item mt-3">
+                                    <a class="nav-link subtitle" href="/regulation/securities">
+                                      Securities
+                                    </a>
+                                  </li>
+                                  <li class="nav-item ">
+                                    <a class="nav-link"
+                                      href="/regulation/securities/rules_of_bursa_malaysia_securities">
+                                      Rules of Bursa Malaysia Securities
+                                    </a>
+                                  </li>
+                                  <li class="nav-item ">
+                                    <a class="nav-link"
+                                      href="/regulation/securities/rules_of_bursa_malaysia_securities_clearing">
+                                      Rules of Bursa Malaysia Securities Clearing
+                                    </a>
+                                  </li>
+                                  <li class="nav-item ">
+                                    <a class="nav-link"
+                                      href="/regulation/securities/rules_of_bursa_malaysia_depository">
+                                      Rules of Bursa Malaysia Depository
+                                    </a>
+                                  </li>
+
+
+                                </ul>
+                              </div>
+                              <div class="col-lg-3">
+                                <ul class="list-unstyled">
+                                  <li class="nav-item ">
+                                    <a class="nav-link subtitle" href="/regulation/derivatives">
+                                      Derivatives
+                                    </a>
+                                  </li>
+                                  <li class="nav-item ">
+                                    <a class="nav-link"
+                                      href="/regulation/derivatives/rules_of_bursa_malaysia_derivatives">
+                                      Rules of Bursa Malaysia Derivatives
+                                    </a>
+                                  </li>
+                                  <li class="nav-item ">
+                                    <a class="nav-link"
+                                      href="/regulation/derivatives/rules_of_bursa_malaysia_derivatives_clearing">
+                                      Rules of Bursa Malaysia Derivatives Clearing
+                                    </a>
+                                  </li>
+                                  <li class="nav-item mt-3">
+                                    <a class="nav-link subtitle" href="/regulation/bonds/rules_of_bursa_malaysia_bonds">
+                                      Bonds
+                                    </a>
+                                  </li>
+                                  <li class="nav-item ">
+                                    <a class="nav-link" href="/regulation/bonds/rules_of_bursa_malaysia_bonds">
+                                      Rules of Bursa Malaysia Bonds
+                                    </a>
+                                  </li>
+                                  <li class="nav-item mt-3">
+                                    <a class="nav-link subtitle" href="/regulation/islamic_market">
+                                      Islamic
+                                    </a>
+                                  </li>
+                                  <li class="nav-item ">
+                                    <a class="nav-link" href="/regulation/islamic_market/rules_of_bursa_suq_al_sila">
+                                      Rules of Bursa Suq Al-Sila' (BSAS)
+                                    </a>
+                                  </li>
+                                  <li class="nav-item ">
+                                    <a class="nav-link"
+                                      href="/regulation/islamic_market/best_practices_for_islamic_stockbroking_services">
+                                      Best Practices for Islamic Stockbroking Services
+                                    </a>
+                                  </li>
+
+                                </ul>
+                              </div>
+                              <div class="col-lg-3">
+                                <ul class="list-unstyled">
+                                  <li class="nav-item ">
+                                    <a class="nav-link subtitle" href="/regulation/lfx">
+                                      Labuan International Financial Exchange (LFX)
+                                    </a>
+                                  </li>
+                                  <li class="nav-item ">
+                                    <a class="nav-link" href="/regulation/lfx/rules_of_lfx">
+                                      Rules of LFX
+                                    </a>
+                                  </li>
+                                  <li class="nav-item ">
+                                    <a class="nav-link" href="/regulation/lfx/directives_circulars">
+                                      Directives / Circulars
+                                    </a>
+                                  </li>
+                                  <li class="nav-item mt-3">
+                                    <a class="nav-link subtitle"
+                                      href="/regulation/faqs_relating_to_bursa_malaysia_rules">
+                                      FAQs Relating to Bursa Malaysia Rules
+                                    </a>
+                                  </li>
+                                  <li class="nav-item mt-3">
+                                    <a class="nav-link subtitle" href="/regulation/public_consultation">
+                                      Public Consultation
+                                    </a>
+                                  </li>
+                                  <li class="nav-item mt-3">
+                                    <a class="nav-link subtitle" href="/regulation/communication_notes_guides">
+                                      Communication Notes/Guides
+                                    </a>
+                                  </li>
+                                  <li class="nav-item mt-3">
+                                    <a class="nav-link subtitle" href="#asklistingbursa_modal" data-toggle="modal"
+                                      data-target="#asklistingbursa_modal">
+                                      AskListing@Bursa
+                                    </a>
+                                  </li>
+                                  <li class="nav-item mt-3">
+                                    <a class="nav-link subtitle" href="#bursalink_modal" data-toggle="modal"
+                                      data-target="#bursalink_modal">
+                                      Bursa Link
+                                    </a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item dropdown yamm-fullwidth">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Reference
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <div class="yamm-content container">
+                            <ul class="list-unstyled">
+                              <li class="nav-item ">
+                                <a class="nav-link subtitle" href="/reference/research_repository">
+                                  Research Repository
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/reference/research_repository/overview">
+                                  Overview
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link"
+                                  href="/reference/research_repository/cmdf_bursa_research_scheme_cbrs">
+                                  CMDF - Bursa Research Scheme (CBRS)
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/reference/research_repository/non_cbrs_research_reports">
+                                  Non - CBRS Research Reports
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/reference/research_repository/research_reports">
+                                  Research Reports
+                                </a>
+                              </li>
+                            </ul>
+                            <ul class="list-unstyled">
+                              <li class="nav-item ">
+                                <a class="nav-link subtitle" href="/reference/insights">
+                                  Insights
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link"
+                                  href="/reference/insights/securities/investing_basic/understanding_indices">
+                                  Securities
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/reference/insights/derivatives/what_are_derivatives">
+                                  Derivatives
+                                </a>
+                              </li>
+                              <!-- <li class="nav-item ">
+                                <a class="nav-link" href="/reference/insights/islamic_market/shariah_committee">
+                                  Islamic Markets
+                                </a>
+                              </li> -->
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/reference/insights/institutional_insights">
+                                  Institutional Insights
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/reference/insights/regulatory_insights/articles">
+                                  Regulatory Insights
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/reference/insights/knowledge_centre">
+                                  KnowledgeCentre@Bursa
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link"
+                                  href="/reference/insights/market_terminologies/multilingual_resources">
+                                  Market Terminologies
+                                </a>
+                              </li>
+                              <!-- <li class="nav-item ">
+                                <a class="nav-link" href="/reference/insights/related_links">
+                                  Related Links
+                                </a>
+                              </li> -->
+                            </ul>
+                            <ul class="list-unstyled">
+                              <li class="nav-item ">
+                                <a class="nav-link subtitle" href="/reference/faqs">
+                                  FAQs
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/reference/faqs/securities/faqs_on_structured_warrants">
+                                  Securities
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/reference/faqs/derivatives/faqs_on_products">
+                                  Derivatives
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/reference/faqs/islamic_market">
+                                  Islamic Markets
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/reference/faqs/lfx/faqs_on_lfx_general">
+                                  Labuan International Financial Exchange (LFX)
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/reference/faqs/leap/faqs_on_general_information_of_leap">
+                                  LEAP
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/reference/faqs/cds">
+                                  Central Depository System (CDS)
+                                </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item dropdown yamm-fullwidth">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        About Bursa
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <div class="yamm-content container">
+                            <ul class="list-unstyled">
+                              <li class="nav-item ">
+                                <a class="nav-link subtitle" href="/about_bursa/about_us">
+                                  About Us
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/about_bursa/about_us">
+                                  Overview
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/about_bursa/about_us/who_we_are">
+                                  Who We Are
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/about_bursa/about_us/our_organisation/corporate_structure">
+                                  Our Organisation
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/about_bursa/about_us/corporate_governance/governance_model">
+                                  Corporate Governance
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link"
+                                  href="/about_bursa/about_us/board_of_directors/board_of_directors_of_bursa_malaysia">
+                                  Board of Directors
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link"
+                                  href="/about_bursa/about_us/top_management_team/management_committee">
+                                  Top Management Team
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/about_bursa/about_us/other_corporate_information">
+                                  Other Corporate Information
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/about_bursa/about_us/corporate_history">
+                                  Corporate History
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/about_bursa/about_us/awards_certification">
+                                  Awards and Certification
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/about_bursa/about_us/calendar">
+                                  Calendar
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/about_bursa/about_us/tenders">
+                                  Tenders
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/about_bursa/about_us/related_links">
+                                  Related Links
+                                </a>
+                              </li>
+                            </ul>
+                            <ul class="list-unstyled">
+                              <li class="nav-item ">
+                                <a class="nav-link subtitle" href="https://bursa.listedcompany.com/home.html">
+                                  Investor Relations
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="https://bursa.listedcompany.com/home.html">
+                                  IR Home
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="https://bursa.listedcompany.com/financials.html">
+                                  Financial Information
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="https://bursa.listedcompany.com/stock_chart_advance.html">
+                                  Stock Information
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="https://bursa.listedcompany.com/foreign_shareholding.html">
+                                  Shareholdings
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="https://bursa.listedcompany.com/newsroom.html">
+                                  Information for Shareholders
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="https://bursa.listedcompany.com/feedback.html">
+                                  Information Request
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="https://bursa.listedcompany.com/on_the_road.html">
+                                  Other Information
+                                </a>
+                              </li>
+                            </ul>
+                            <ul class="list-unstyled">
+                              <li class="nav-item ">
+                                <a class="nav-link subtitle" href="/about_bursa/sustainability">
+                                  Sustainability
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/about_bursa/sustainability">
+                                  Overview
+                                </a>
+                              </li>
+                              <!-- <li class="nav-item ">
+                                <a class="nav-link" href="/about_bursa/sustainability/our_integrated_sustainability_strategy">
+                                  Our Integrated Sustainability Strategy
+                                </a>
+                              </li> -->
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/about_bursa/sustainability/governance_of_sustainability">
+                                  Governance of Sustainability
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/about_bursa/sustainability/assessment_of_material_matters">
+                                  Assessment of Material Matters
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/about_bursa/sustainability/engaging_our_stakeholders">
+                                  Engaging our Stakeholders
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link"
+                                  href="/about_bursa/sustainability/our_contribution_to_sustainable_development_goals">
+                                  Our Contribution to Sustainable Development Goals
+                                </a>
+                              </li>
+                              <!-- <li class="nav-item ">
+                                <a class="nav-link" href="/about_bursa/sustainability/our_material_factors">
+                                  Our Material Factors
+                                </a>
+                              </li> -->
+                              <!-- <li class="nav-item ">
+                                <a class="nav-link" href="/about_bursa/sustainability/community">
+                                  Community
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/about_bursa/sustainability/environment">
+                                  Environment
+                                </a>
+                              </li> -->
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/about_bursa/sustainability/sustainability_reports">
+                                  Sustainability Reports
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/about_bursa/sustainability/others/statement">
+                                  Others
+                                </a>
+                              </li>
+                            </ul>
+                            <ul class="list-unstyled">
+                              <li class="nav-item ">
+                                <a class="nav-link subtitle" href="/about_bursa/risk_compliance">
+                                  Risk & Compliance
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link " href="/about_bursa/risk_compliance/overview">
+                                  Overview
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/about_bursa/risk_compliance/framework_governance_structure">
+                                  Framework & Governance
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link"
+                                  href="/about_bursa/risk_compliance/enterprise_risk_management/management_of_operational_risk">
+                                  Enterprise Risk Management
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/about_bursa/risk_compliance/compliance_management">
+                                  Compliance Management
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/about_bursa/risk_compliance/business_continuity_management">
+                                  Business Continuity Management
+                                </a>
+                              </li>
+                              <li class="nav-item mt-3">
+                                <a class="nav-link subtitle" href="/about_bursa/media_centre">
+                                  Media Centre
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/about_bursa/media_centre/speeches">
+                                  Speeches
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/about_bursa/media_centre/gallery">
+                                  Gallery
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/about_bursa/media_centre/media_releases">
+                                  Media Releases
+                                </a>
+                              </li>
+                              <li class="nav-item ">
+                                <a class="nav-link" href="/about_bursa/media_centre/articles">
+                                  Articles
+                                </a>
+                              </li>
+                              <li class="nav-item mt-3">
+                                <a class="nav-link subtitle" href="/about_bursa/careers">
+                                  Careers
+                                </a>
+                              </li>
+
+
+                            </ul>
+                          </div>
+                        </li>
+                      </ul>
+                    </li>
+
+                  </ul>
+                </div>
+              </nav>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="full-nav-bar">
+          <div id="full-nav" class="container">
+
+          </div>
+        </div>
+        <div id="mobile-sub-nav" class="container-fluid">
+          <div class="row no-gutters">
+            <div class="col-6">
+              <a id="company_announcements_main" href="/market_information/announcements/company_announcement"
+                class="btn btn-sm btn-red btn-block">
+                <span>
+                  Company Announcements
+                </span>
+              </a>
+            </div>
+            <div id="get_started_m" class="col-6" onclick="toHomeIntro_m()">
+              <a id="get_started" href=# class="btn btn-sm btn-red btn-block">
+                <span>
+                  <img src="/sites/5bb54be15f36ca0af339077a/theme/images/icon-guided-tour.svg?1590549628"
+                    class="guided-tour-icon" />
+                  Guided Tour
+                </span>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+      <div id="search-bar">
+        <div id="searchbar" data-globalsearch-path="/global_search"></div>
+
+      </div>
+
+      <div id="lang-bar" class="">
+        <div class="container">
+          <div class="row">
+            <div class="col-4">
+              <a id="local_en" class="btn btn-outline btn-light upper btn-block h-100 d-table" href="/"><span
+                  class="d-table-cell align-middle">English</span></a>
+            </div>
+            <div class="col-4">
+              <a id="local_bm" class="btn btn-outline btn-light upper btn-block h-100 d-table" href="/bm"><span
+                  class="d-table-cell align-middle">Bahasa Malaysia</span></a>
+            </div>
+            <div class="col-4">
+              <a id="local_cn" class="btn btn-outline btn-light upper btn-block h-100 d-table" href="/cn"><span
+                  class="d-table-cell align-middle">简体中文</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- To use your snippet, just add the following code in your page template-->
+  <!-- {% include modal_content %} -->
+
+
+  <!-- askListing Modal -->
+  <div class="modal fade" id="asklistingbursa_modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">AskListing@Bursa</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>You will be-redirected to AskListing@Bursa, are you sure you want to leave this page?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-grey" data-dismiss="modal">Stay</button>
+          <a href="http://asklisting.bursamalaysia.com/" class="btn btn-primary" target="_blank">Leave this page</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- help centre Modal -->
+  <div class="modal fade" id="helpcentre_modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Help Centre</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>You will be-redirected to Help Desk, are you sure you want to leave this page?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-grey" data-dismiss="modal">Stay</button>
+          <a href="http://customer.bursamalaysia.com/" class="btn btn-primary" target="_blank">Leave this page</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- bursalink Modal -->
+  <div class="modal fade" id="bursalink_modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Bursa Link</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>You will be-redirected to Bursa Link, are you sure you want to leave this page?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-grey" data-dismiss="modal">Stay</button>
+          <a href="https://link.bursamalaysia.com/BursaLinkWeb/sso_security/login.jsp" class="btn btn-primary"
+            target="_blank">Leave this page</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- bursamarketplace Modal -->
+  <div class="modal fade" id="bursamarketplace_modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Bursa Marketplace</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>You will be-redirected to Bursa Marketplace, are you sure you want to leave this page?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-grey" data-dismiss="modal">Stay</button>
+          <a href="http://www.bursamarketplace.com" class="btn btn-primary" target="_blank">Leave this page</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LFX Modal -->
+  <div class="modal fade" id="lfx_modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">LFX Listing Sponsor</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>You will be-redirected to LFX Listing Sponsor, are you sure you want to leave this page?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-grey" data-dismiss="modal">Stay</button>
+          <a href="/listing/lfx/listing_sponsors/listing_sponsor_login" class="btn btn-primary" target="_blank">Leave
+            this page</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- bursasustain Modal -->
+  <div class="modal fade" id="bursasustain_modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Corporate Governance and Sustainability</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>You will be-redirected to BursaSustain website, are you sure you want to leave this page?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-grey" data-dismiss="modal">Stay</button>
+          <a href="https://bursasustain.bursamalaysia.com/" class="btn btn-primary" target="_blank">Leave this page</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- bursasustain Modal -->
+  <div class="modal fade" id="bursasustain_modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Corporate Governance and Sustainability</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>You will be-redirected to BursaSustain website, are you sure you want to leave this page?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-grey" data-dismiss="modal">Stay</button>
+          <a href="https://bursasustain.bursamalaysia.com/" class="btn btn-primary" target="_blank">Leave this page</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="main-block">
+
+
+    <!-- To use your snippet, just add the following code in your page template-->
+    <!-- {% include banner %} -->
+
+
+    <div class="inner-banner top-banner">
+      <div class="item"
+        style='background-image: url(/sites/5bb54be15f36ca0af339077a/pages/5bb54c8c5f36ca0c2cacc17c/files/top-banner-market.jpg?1583501026);'>
+        <div class="">
+
+          <div class="overlayer text-left">
+            <div class="container">
+
+              <div class="banner-caption">
+                <h2 class="upper">
+                  EQUITIES
+                </h2>
+
+                <div class="desc">
+                  <u></u>Equities offer considerable potential for capital growth and are long term risk investments.
+                  Ownership of equities will often entitle the investor to a portion of the company's profits through
+                  dividends.
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <section class="container">
+
+      <!-- To use your snippet, just add the following code in your page template-->
+      <!-- {% include breadcrumb %} -->
+
+
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+
+
+          <li class="breadcrumb-item">
+            <a href="/">
+              Home
+            </a>
+          </li>
+
+
+
+          <li class="breadcrumb-item">
+            <a href="/market_information">
+              Market Information
+            </a>
+          </li>
+
+
+
+          <li class="breadcrumb-item active" aria-current="page">Equities Prices</li>
+
+
+        </ol>
+      </nav>
+
+      <!-- To use your snippet, just add the following code in your page template-->
+      <!-- {% include equity_prices_table_filter %} -->
+
+      <script>
+
+      </script>
+      <script>
+
+      </script>
+      <div class="bg-light p-4 js-prices-table-autoscroll">
+        <div class="row">
+          <div class="col-xl-4 border-xl-right border-dark">
+            <h2 class="h5 bold">Today's Update</h2>
+            <div class="row no-gutters text-center">
+              <div class="col bg-white mr-1 mb-0 h5 bold p-2">
+                01 Jun 2020
+              </div>
+              <div class="col bg-white h5 mb-0  bold p-2">
+                12:13 PM
+              </div>
+              <div class="col-12 bg-white mt-1 p-2 h6 bold">
+                <i class="far fa-clock"></i> Prices are delayed by 15 minutes
+              </div>
+            </div>
+
+            <h2 class="h5 bold mt-4">Trading Session</h2>
+            <p class="footnote">
+              <b>Monday - Friday</b><br />
+              First Session : 0900 - 1230<br />
+              Second Session : 1430 - 1700
+            </p>
+
+            <p class="footnote">
+              Prices displayed on this website are delayed by
+              15 minutes. To access real-time data, please
+              contact your <a href='/trade/trading_resources/brokers_for_equities/list_of_participating_organisations'
+                title='Stock Brokers'>stockbroker</a>, our <a href='/market_information/market_data/information_vendors'
+                title='Information Services Vendors'>Information Services
+                Vendors</a> or subscribe to <a href='http://www.bursastation.com' title='BursaStation'
+                target="_blank">BursaStation</a>.
+            </p>
+          </div>
+
+          <!-- To use your snippet, just add the following code in your page template-->
+          <!-- {% include equity_prices_filter_form %} -->
+
+          <script>
+
+          </script>
+          <div class="col-xl-8 js-anchor-searchbox">
+            <h2 class="bold mb-0">Refine Your Search</h2>
+            <hr />
+            <form class="input-center equitiy-table-filter">
+              <div class="row">
+                <div class="col-12 order-1">
+                  <div class="form-group row">
+                    <label for="inKeyword" class="col-md-2 col-sm-4 col-form-label">Keyword</label>
+                    <div class="col-md-10 col-sm-8">
+
+                      <div id="refine_your_search_input"></div>
+
+
+                    </div>
+                  </div>
+                </div>
+
+
+
+                <div class="col-md-6 order-2">
+                  <div class="form-group row">
+                    <label class="col-sm-4 col-form-label">Top Stock</label>
+                    <div class="col-sm-8">
+                      <select class="form-control selectpicker stock-select" name='top_stock'>
+                        <option value='' class='default-opt'>Select Top Stock</option>
+                        <option selected='selected' value="top_active">Top Active</option>
+                        <option value="top_turnover">Top Turnover</option>
+                        <option value="top_gainers">Top Gainers</option>
+                        <option value="top_losers">Top Losers</option>
+                        <option value="top_percent_gainers">Top % Gainers</option>
+                        <option value="top_percent_losers">Top % Losers</option>
+                      </select>
+                    </div>
+
+                  </div>
+                </div>
+
+
+                <div class="col-md-6 order-5 order-md-3">
+                  <div class="form-group row">
+                    <label class="col-sm-4 col-form-label">Market</label>
+                    <div class="col-sm-8">
+                      <select name='board' class="form-control selectpicker board-select">
+                        <option selected='selected' class='default-opt' value="">Select Market</option>
+
+
+
+
+
+                        <option value=MAIN-MKT
+                          data-sector-val='CLOSED END FUND:CLOSED END FUND|CONSTRUCTION:CONSTRUCTION|CONSUMER PRODUCTS %26 SERVICES:AGRICULTURAL PRODUCTS:AUTOMOTIVE:CONSUMER SERVICES:FOOD%26 BEVERAGES:HOUSEHOLD GOODS:PERSONAL GOODS:RETAILERS:TRAVEL%2C LEISURE %26 HOSPITALITY|ENERGY:ENERGY INFRASTRUCTURE%2C EQUIPMENT %26 SERVICES:OIL %26 GAS PRODUCERS:OTHER ENERGY RESOURCES|FINANCIAL SERVICES:BANKING:INSURANCE:OTHER FINANCIALS|HEALTH CARE:HEALTH CARE EQUIPMENT %26 SERVICES:HEALTH CARE PROVIDERS:PHARMACEUTICALS|INDUSTRIAL PRODUCTS %26 SERVICES:AUTO PARTS:BUILDING MATERIALS:CHEMICALS:DIVERSIFIED INDUSTRIALS:INDUSTRIAL ENGINEERING:INDUSTRIAL MATERIALS%2C COMPONENTS %26 EQUIPMENT:INDUSTRIAL SERVICES:METALS:PACKAGING MATERIALS:WOOD %26 WOOD PRODUCTS|PLANTATION:PLANTATION|PROPERTY:PROPERTY|REAL ESTATE INVESTMENT TRUSTS:REAL ESTATE INVESTMENT TRUSTS|SPECIAL PURPOSE ACQUISITION COMPANY:SPECIAL PURPOSE ACQUISITION COMPANY|TECHNOLOGY:DIGITAL SERVICES:SEMICONDUCTORS:SOFTWARE:TECHNOLOGY EQUIPMENT|TELECOMMUNICATIONS %26 MEDIA:MEDIA:TELECOMMUNICATIONS EQUIPMENT:TELECOMMUNICATIONS SERVICE PROVIDERS|TRANSPORTATION %26 LOGISTICS:TRANSPORTATION %26 LOGISTICS SERVICES:TRANSPORTATION EQUIPMENT|UTILITIES:ELECTRICITY:GAS%2C WATER %26 MULTI-UTILITIES'
+                          data-sector-title='Closed-End Funds:Closed End Fund|Construction:Construction|Consumer Products & Services:Agricultural Products:Automotive:Consumer Services:Food & Beverages:Houshold Goods:Personal Goods:Retailers:Travel, Leisure & Hospitality|Energy:Energy, Infrastructure, Equipment & Services:Oil & Gas Producers:Other Energy Resources|Financial Services:Banking:Insurance:Other Financials|Health Care:Health Care Equipment & Services:Health Care Providers:Pharmaceuticals|Industrial Products & Services:Auto Parts:Building Materials:Chemicals:Diversified Industrials:Industrial Engineering:Industrial Materials, Components & Equipment:Industrial Services:Metals:Packaging Materials:Wood & Wood Products|Plantation:Plantation|Property:Property|Real Estate Investment Trusts:Real Estate Investment Trusts|SPAC:Special Purpose Acquisition Company|Technology:Digital Services:Semiconductors:Software:Technology Equipment|Telecommunications & Media:Media:Telecommunications Equipment:Telecommunications Service Providers|Transportation & Logistics:Transportation & Logistics Services:Transportation Equipment|Utilities:Electricity:Gas, Water & Multi-Utilities'>
+                          Main Market
+                        </option>
+
+
+
+
+
+                        <option value=ACE-MKT
+                          data-sector-val='CONSTRUCTION:CONSTRUCTION|CONSUMER PRODUCTS %26 SERVICES:AGRICULTURAL PRODUCTS:AUTOMOTIVE:CONSUMER SERVICES:FOOD%26 BEVERAGES:HOUSEHOLD GOODS:PERSONAL GOODS:RETAILERS:TRAVEL%2C LEISURE %26 HOSPITALITY|ENERGY:ENERGY INFRASTRUCTURE%2C EQUIPMENT %26 SERVICES:OIL %26 GAS PRODUCERS:OTHER ENERGY RESOURCES|FINANCIAL SERVICES:BANKING:INSURANCE:OTHER FINANCIALS|HEALTH CARE:HEALTH CARE EQUIPMENT %26 SERVICES:HEALTH CARE PROVIDERS:PHARMACEUTICALS|INDUSTRIAL PRODUCTS %26 SERVICES:AUTO PARTS:BUILDING MATERIALS:CHEMICALS:DIVERSIFIED INDUSTRIALS:INDUSTRIAL ENGINEERING:INDUSTRIAL MATERIALS%2C COMPONENTS %26 EQUIPMENT:INDUSTRIAL SERVICES:METALS:PACKAGING MATERIALS:WOOD %26 WOOD PRODUCTS|PLANTATION:PLANTATION|PROPERTY:PROPERTY|TECHNOLOGY:DIGITAL SERVICES:SEMICONDUCTORS:SOFTWARE:TECHNOLOGY EQUIPMENT|TELECOMMUNICATIONS %26 MEDIA:MEDIA:TELECOMMUNICATIONS EQUIPMENT:TELECOMMUNICATIONS SERVICE PROVIDERS|TRANSPORTATION %26 LOGISTICS:TRANSPORTATION %26 LOGISTICS SERVICES:TRANSPORTATION EQUIPMENT|UTILITIES:ELECTRICITY:GAS%2C WATER %26 MULTI-UTILITIES'
+                          data-sector-title='Construction:Construction|Consumer Products & Services:Agricultural Products:Automotive:Consumer Services:Food & Beverages:Houshold Goods:Personal Goods:Retailers:Travel, Leisure & Hospitality|Energy:Energy, Infrastructure, Equipment & Services:Oil & Gas Producers:Other Energy Resources|Financial Services:Banking:Insurance:Other Financials|Health Care:Health Care Equipment & Services:Health Care Providers:Pharmaceuticals|Industrial Products & Services:Auto Parts:Building Materials:Chemicals:Diversified Industrials:Industrial Engineering:Industrial Materials, Components & Equipment:Industrial Services:Metals:Packaging Materials:Wood & Wood Products|Plantation:Plantation|Property:Property|Technology:Digital Services:Semiconductors:Software:Technology Equipment|Telecommunications & Media:Media:Telecommunications Equipment:Telecommunications Service Providers|Transportation & Logistics:Transportation & Logistics Services:Transportation Equipment|Utilities:Electricity:Gas, Water & Multi-Utilities'>
+                          ACE Market
+                        </option>
+
+
+
+
+
+                        <option value=LEAP-MKT
+                          data-sector-val='CONSTRUCTION:CONSTRUCTION|CONSUMER PRODUCTS %26 SERVICES:AGRICULTURAL PRODUCTS:AUTOMOTIVE:CONSUMER SERVICES:FOOD%26 BEVERAGES:HOUSEHOLD GOODS:PERSONAL GOODS:RETAILERS:TRAVEL%2C LEISURE %26 HOSPITALITY|ENERGY:ENERGY INFRASTRUCTURE%2C EQUIPMENT %26 SERVICES:OIL %26 GAS PRODUCERS:OTHER ENERGY RESOURCES|FINANCIAL SERVICES:BANKING:INSURANCE:OTHER FINANCIALS|HEALTH CARE:HEALTH CARE EQUIPMENT %26 SERVICES:HEALTH CARE PROVIDERS:PHARMACEUTICALS|INDUSTRIAL PRODUCTS %26 SERVICES:AUTO PARTS:BUILDING MATERIALS:CHEMICALS:DIVERSIFIED INDUSTRIALS:INDUSTRIAL ENGINEERING:INDUSTRIAL MATERIALS%2C COMPONENTS %26 EQUIPMENT:INDUSTRIAL SERVICES:METALS:PACKAGING MATERIALS:WOOD %26 WOOD PRODUCTS|PLANTATION:PLANTATION|PROPERTY:PROPERTY|TECHNOLOGY:DIGITAL SERVICES:SEMICONDUCTORS:SOFTWARE:TECHNOLOGY EQUIPMENT|TELECOMMUNICATIONS %26 MEDIA:MEDIA:TELECOMMUNICATIONS EQUIPMENT:TELECOMMUNICATIONS SERVICE PROVIDERS|TRANSPORTATION %26 LOGISTICS:TRANSPORTATION %26 LOGISTICS SERVICES:TRANSPORTATION EQUIPMENT|UTILITIES:ELECTRICITY:GAS%2C WATER %26 MULTI-UTILITIES'
+                          data-sector-title='Construction:Construction|Consumer Products & Services:Agricultural Products:Automotive:Consumer Services:Food & Beverages:Houshold Goods:Personal Goods:Retailers:Travel, Leisure & Hospitality|Energy:Energy, Infrastructure, Equipment & Services:Oil & Gas Producers:Other Energy Resources|Financial Services:Banking:Insurance:Other Financials|Health Care:Health Care Equipment & Services:Health Care Providers:Pharmaceuticals|Industrial Products & Services:Auto Parts:Building Materials:Chemicals:Diversified Industrials:Industrial Engineering:Industrial Materials, Components & Equipment:Industrial Services:Metals:Packaging Materials:Wood & Wood Products|Plantation:Plantation|Property:Property|Technology:Digital Services:Semiconductors:Software:Technology Equipment|Telecommunications & Media:Media:Telecommunications Equipment:Telecommunications Service Providers|Transportation & Logistics:Transportation & Logistics Services:Transportation Equipment|Utilities:Electricity:Gas, Water & Multi-Utilities'>
+                          LEAP Market
+                        </option>
+
+
+
+
+
+                        <option value=WARRANTS
+                          data-sector-val='CONSTRUCTION:CONSTRUCTION|CONSUMER PRODUCTS %26 SERVICES:AGRICULTURAL PRODUCTS:AUTOMOTIVE:CONSUMER SERVICES:FOOD%26 BEVERAGES:HOUSEHOLD GOODS:PERSONAL GOODS:RETAILERS:TRAVEL%2C LEISURE %26 HOSPITALITY|ENERGY:ENERGY INFRASTRUCTURE%2C EQUIPMENT %26 SERVICES:OIL %26 GAS PRODUCERS:OTHER ENERGY RESOURCES|FINANCIAL SERVICES:BANKING:INSURANCE:OTHER FINANCIALS|HEALTH CARE:HEALTH CARE EQUIPMENT %26 SERVICES:HEALTH CARE PROVIDERS:PHARMACEUTICALS|INDUSTRIAL PRODUCTS %26 SERVICES:AUTO PARTS:BUILDING MATERIALS:CHEMICALS:DIVERSIFIED INDUSTRIALS:INDUSTRIAL ENGINEERING:INDUSTRIAL MATERIALS%2C COMPONENTS %26 EQUIPMENT:INDUSTRIAL SERVICES:METALS:PACKAGING MATERIALS:WOOD %26 WOOD PRODUCTS|PLANTATION:PLANTATION|PROPERTY:PROPERTY|STRUCTURED WARRANTS:STRUCTURED WARRANTS|TECHNOLOGY:DIGITAL SERVICES:SEMICONDUCTORS:SOFTWARE:TECHNOLOGY EQUIPMENT|TELECOMMUNICATIONS %26 MEDIA:MEDIA:TELECOMMUNICATIONS EQUIPMENT:TELECOMMUNICATIONS SERVICE PROVIDERS|TRANSPORTATION %26 LOGISTICS:TRANSPORTATION %26 LOGISTICS SERVICES:TRANSPORTATION EQUIPMENT|UTILITIES:ELECTRICITY:GAS%2C WATER %26 MULTI-UTILITIES'
+                          data-sector-title='Construction:Construction|Consumer Products & Services:Agricultural Products:Automotive:Consumer Services:Food & Beverages:Houshold Goods:Personal Goods:Retailers:Travel, Leisure & Hospitality|Energy:Energy, Infrastructure, Equipment & Services:Oil & Gas Producers:Other Energy Resources|Financial Services:Banking:Insurance:Other Financials|Health Care:Health Care Equipment & Services:Health Care Providers:Pharmaceuticals|Industrial Products & Services:Auto Parts:Building Materials:Chemicals:Diversified Industrials:Industrial Engineering:Industrial Materials, Components & Equipment:Industrial Services:Metals:Packaging Materials:Wood & Wood Products|Plantation:Plantation|Property:Property|Structured Warrants:Structured Warrants|Technology:Digital Services:Semiconductors:Software:Technology Equipment|Telecommunications & Media:Media:Telecommunications Equipment:Telecommunications Service Providers|Transportation & Logistics:Transportation & Logistics Services:Transportation Equipment|Utilities:Electricity:Gas, Water & Multi-Utilities'>
+                          Structured Warrants
+                        </option>
+
+
+
+
+
+                        <option value=ETF
+                          data-sector-val='EXCHANGE TRADED FUND-BOND:BOND FUND|EXCHANGE TRADED FUND-COMMODITY:COMMODITY FUND|EXCHANGE TRADED FUND-EQUITY:EQUITY FUND'
+                          data-sector-title='Exchange Traded Fund-Bond:Bond Fund|Exchange Traded Fund-Commodity:Commodity Fund|Exchange Traded Fund-Equity:Equity Fund'>
+                          ETF
+                        </option>
+
+
+
+
+
+                        <option value=BOND&amp;LOAN
+                          data-sector-val='BOND CONVENTIONAL:CONVENTIONAL-GG:CONVENTIONAL-MGS:CONVENTIONAL-PDS|BOND ISLAMIC:ISLAMIC-GG:ISLAMIC-GII:ISLAMIC-PDS|CONSTRUCTION:CONSTRUCTION|CONSUMER PRODUCTS %26 SERVICES:AGRICULTURAL PRODUCTS:AUTOMOTIVE:CONSUMER SERVICES:FOOD%26 BEVERAGES:HOUSEHOLD GOODS:PERSONAL GOODS:RETAILERS:TRAVEL%2C LEISURE %26 HOSPITALITY|ENERGY:ENERGY INFRASTRUCTURE%2C EQUIPMENT %26 SERVICES:OIL %26 GAS PRODUCERS:OTHER ENERGY RESOURCES|FINANCIAL SERVICES:BANKING:INSURANCE:OTHER FINANCIALS|HEALTH CARE:HEALTH CARE EQUIPMENT %26 SERVICES:HEALTH CARE PROVIDERS:PHARMACEUTICALS|INDUSTRIAL PRODUCTS %26 SERVICES:AUTO PARTS:BUILDING MATERIALS:CHEMICALS:DIVERSIFIED INDUSTRIALS:INDUSTRIAL ENGINEERING:INDUSTRIAL MATERIALS%2C COMPONENTS %26 EQUIPMENT:INDUSTRIAL SERVICES:METALS:PACKAGING MATERIALS:WOOD %26 WOOD PRODUCTS|PLANTATION:PLANTATION|PROPERTY:PROPERTY|TECHNOLOGY:DIGITAL SERVICES:SEMICONDUCTORS:SOFTWARE:TECHNOLOGY EQUIPMENT|TELECOMMUNICATIONS %26 MEDIA:MEDIA:TELECOMMUNICATIONS EQUIPMENT:TELECOMMUNICATIONS SERVICE PROVIDERS|TRANSPORTATION %26 LOGISTICS:TRANSPORTATION %26 LOGISTICS SERVICES:TRANSPORTATION EQUIPMENT|UTILITIES:ELECTRICITY:GAS%2C WATER %26 MULTI-UTILITIES'
+                          data-sector-title='Bond Conventional:Conventional GG:Conventional MGS:Conventional PDS|Bond Islamic:Islamic GG:Islamic GII:Islamic PDS|Construction:Construction|Consumer Products & Services:Agricultural Products:Automotive:Consumer Services:Food & Beverages:Houshold Goods:Personal Goods:Retailers:Travel, Leisure & Hospitality|Energy:Energy, Infrastructure, Equipment & Services:Oil & Gas Producers:Other Energy Resources|Financial Services:Banking:Insurance:Other Financials|Health Care:Health Care Equipment & Services:Health Care Providers:Pharmaceuticals|Industrial Products & Services:Auto Parts:Building Materials:Chemicals:Diversified Industrials:Industrial Engineering:Industrial Materials, Components & Equipment:Industrial Services:Metals:Packaging Materials:Wood & Wood Products|Plantation:Plantation|Property:Property|Technology:Digital Services:Semiconductors:Software:Technology Equipment|Telecommunications & Media:Media:Telecommunications Equipment:Telecommunications Service Providers|Transportation & Logistics:Transportation & Logistics Services:Transportation Equipment|Utilities:Electricity:Gas, Water & Multi-Utilities'>
+                          Bond
+                        </option>
+
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6 order-3 order-md-4">
+                  <div class="form-group row">
+
+                    <label class="col-sm-4 col-form-label">Alphabetical</label>
+                    <div class="col-sm-8">
+                      <select class="form-control selectpicker" name='alphabetical' id="inAlpha">
+                        <option class='default-opt' value=''>Select Alphabetical</option>
+                        <option value="[0-9]">0-9</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                        <option value="E">E</option>
+                        <option value="F">F</option>
+                        <option value="G">G</option>
+                        <option value="H">H</option>
+                        <option value="I">I</option>
+                        <option value="J">J</option>
+                        <option value="K">K</option>
+                        <option value="L">L</option>
+                        <option value="M">M</option>
+                        <option value="N">N</option>
+                        <option value="O">O</option>
+                        <option value="P">P</option>
+                        <option value="Q">Q</option>
+                        <option value="R">R</option>
+                        <option value="S">S</option>
+                        <option value="T">T</option>
+                        <option value="U">U</option>
+                        <option value="V">V</option>
+                        <option value="W">W</option>
+                        <option value="X">X</option>
+                        <option value="Y">Y</option>
+                        <option value="Z">Z</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6 order-6 order-md-5">
+                  <div class="form-group row">
+                    <label class="col-sm-4 col-form-label">Sector</label>
+                    <div class="col-sm-8">
+                      <select class="form-control selectpicker sector-select" name='sector'>
+                        <option class='default-opt' value="">Select Sector</option>
+
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 order-4 order-md-6">
+                  <div class="form-group row">
+                    <label for="inLegend" class="col-sm-4 col-form-label">Classification</label>
+                    <div class="col-sm-8">
+                      <select class="form-control selectpicker legend-option show-tick" id="inLegend"
+                        title="Select Classification" name="legend[]" data-selected-text-format="values" multiple>
+                        <option
+                          data-content="<span class='legend'>[c]</span> <span class='legend-label'>refers to Cum dividend</span>"
+                          title="[c]" value="[c]">Cum dividend</option>
+                        <option
+                          data-content="<span class='legend'>[x]</span> <span class='legend-label'>refers to Exclude dividend</span>"
+                          title="[x]" value="[x]">Exclude dividend</option>
+                        <option
+                          data-content="<span class='legend'>[S]</span> <span class='legend-label'>refers to Shariah Compliant stocks</span>"
+                          title="[S]" value="[S]">Shariah Compliant stocks</option>
+                        <option
+                          data-content="<span class='legend'>s</span> <span class='legend-label'>refers to Short selling available</span>"
+                          title="s" value="s">Short selling available</option>
+                        <option disabled data-content="<span class='small'>*You can select multiple options</span>"
+                          title="Multiple selection" value="null"></option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6 order-7 order-md-7">
+                  <div class="form-group row">
+                    <label class="col-sm-4 col-form-label">Sub sector</label>
+                    <div class="col-sm-8">
+                      <select class="form-control selectpicker sub-sector-select" name='sub_sector'>
+                        <option class='default-opt' value="">Select Sub sector</option>
+
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6 order-8">
+                  <button type="button" class="btn btn-primary btn-block form-reset-btn">Reset</button>
+                </div>
+
+                <div class="col-md-6 order-9">
+                  <button type="submit" class="btn btn-primary btn-block"><span class="fa fa-search"></span>
+                    Search</button>
+                </div>
+              </div>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="container my-5">
+      <div class="footnote text-danger clearfix">
+        <i class="fas fa-info-circle"></i> Tips: 1) Click any row for more information on the equity. 2) Hover over the
+        column titles. 3) Sort by desired column.
+      </div>
+      <div class="mb-2">
+
+        <!-- To use your snippet, just add the following code in your page template-->
+        <!-- {% include equity_prices_table %} -->
+
+
+
+
+
+
+
+
+
+
+        <script>
+
+        </script>
+
+
+
+
+
+        <table
+          class="table datatable-striped text-center equity_prices_table datatable-with-sneak-peek js-anchor-price-table"
+          style="width: 100%;" data-entries-count="1868">
+          <thead class="upper font-xxsmall">
+            <tr class="">
+              <th scope="col" data-sort="">FAIL_NO</th>
+              <th scope="col" class="tooltip-js" title="Stock Short Name" data-sort="short_name">FAIL_Name</th>
+              <th scope="col" class="tooltip-js" title="Stock Code" data-sort="stock_id">Code</th>
+              <th scope="col" class="tooltip-js" title="Remark. E.g. Short Selling available / Suspended"
+                data-sort="remarks">REM</th>
+              <th scope="col" class="tooltip-js" title="Current Last Traded Price" data-sort="last_done_price">Last Done
+              </th>
+              <th scope="col" class="tooltip-js" title="Last Adjusted Closing Price" data-sort="previous">LACP</th>
+              <th scope="col" class="tooltip-js" title="Current Price Change" data-sort="change">CHG</th>
+              <th scope="col" class="tooltip-js" title="Current Price Change in Percentage" data-sort="percent_change">
+                %CHG</th>
+              <th scope="col" class="tooltip-js" title="Current Volume Traded" data-sort="cumulative_vol">Vol ('00)</th>
+              <th scope="col" class="tooltip-js" title="Best Buy Volume in Order Book" data-sort="buy_volume">BUY Vol
+                ('00)</th>
+              <th scope="col" class="tooltip-js" title="Best Buy Price" data-sort="buy_price">BUY</th>
+              <th scope="col" class="tooltip-js" title="Best Sell Price" data-sort="sell_price">SELL</th>
+              <th scope="col" class="tooltip-js" title="Best Sell Volume in Order Book" data-sort="sell_volume">SELL Vol
+                ('00)</th>
+              <th scope="col" class="tooltip-js" title="Highest Traded Price for the Day" data-sort="high">HIGH</th>
+              <th scope="col" class="tooltip-js" title="Lowest Traded Price for the Day" data-sort="low">LOW</th>
+
+
+              <th class="hidden">stock_id</th>
+            </tr>
+          </thead>
+          <tbody class=" font-xsmall">
+
+
+
+            <tr class="" id="data-1">
+              <td>1</td>
+              <td class="text-left pl-4 bold">
+
+                <span class="up"></span>
+
+                HLT-WA [S]
+              </td>
+              <td>0188WA</td>
+              <td class="nowrap"></td>
+              <td>
+
+                0.605
+
+              </td>
+              <td>0.355</td>
+              <td class="text-dark">
+                <div class="stock_change text-center bold text-success">
+                  +0.250
+                </div>
+              </td>
+              <td class="text-dark">
+                <div class="text-center bold text-success">
+                  +70.42
+                </div>
+              </td>
+              <td>2,921,847</td>
+              <td>7,672</td>
+              <td>0.605</td>
+              <td>0.610</td>
+              <td>10,189</td>
+              <td>
+
+                0.615
+
+              </td>
+              <td>
+
+                0.385
+
+              </td>
+
+              <td class="stock-id hidden">0188WA</td>
+            </tr>
+
+
+            <tr class="" id="data-1">
+              <td>2</td>
+              <td class="text-left pl-4 bold">
+
+                <span class="up"></span>
+
+                K1 [S]
+              </td>
+              <td>0111</td>
+              <td class="nowrap"></td>
+              <td>
+
+                0.395
+
+              </td>
+              <td>0.320</td>
+              <td class="text-dark">
+                <div class="stock_change text-center bold text-success">
+                  +0.075
+                </div>
+              </td>
+              <td class="text-dark">
+                <div class="text-center bold text-success">
+                  +23.44
+                </div>
+              </td>
+              <td>2,233,286</td>
+              <td>15,695</td>
+              <td>0.395</td>
+              <td>0.400</td>
+              <td>108,627</td>
+              <td>
+
+                0.410
+
+              </td>
+              <td>
+
+                0.355
+
+              </td>
+
+              <td class="stock-id hidden">0111</td>
+            </tr>
+
+
+            <tr class="" id="data-1">
+              <td>3</td>
+              <td class="text-left pl-4 bold">
+
+                <span class="up"></span>
+
+                CAREPLS [S]
+              </td>
+              <td>0163</td>
+              <td class="nowrap"></td>
+              <td>
+
+                1.790
+
+              </td>
+              <td>1.400</td>
+              <td class="text-dark">
+                <div class="stock_change text-center bold text-success">
+                  +0.390
+                </div>
+              </td>
+              <td class="text-dark">
+                <div class="text-center bold text-success">
+                  +27.86
+                </div>
+              </td>
+              <td>1,661,515</td>
+              <td>2,185</td>
+              <td>1.780</td>
+              <td>1.790</td>
+              <td>4,914</td>
+              <td>
+
+                1.810
+
+              </td>
+              <td>
+
+                1.420
+
+              </td>
+
+              <td class="stock-id hidden">0163</td>
+            </tr>
+
+
+            <tr class="" id="data-1">
+              <td>4</td>
+              <td class="text-left pl-4 bold">
+
+                <span class="up"></span>
+
+                LKL [S]
+              </td>
+              <td>0182</td>
+              <td class="nowrap"></td>
+              <td>
+
+                0.700
+
+              </td>
+              <td>0.555</td>
+              <td class="text-dark">
+                <div class="stock_change text-center bold text-success">
+                  +0.145
+                </div>
+              </td>
+              <td class="text-dark">
+                <div class="text-center bold text-success">
+                  +26.13
+                </div>
+              </td>
+              <td>1,539,371</td>
+              <td>3,183</td>
+              <td>0.700</td>
+              <td>0.705</td>
+              <td>4,591</td>
+              <td>
+
+                0.710
+
+              </td>
+              <td>
+
+                0.565
+
+              </td>
+
+              <td class="stock-id hidden">0182</td>
+            </tr>
+
+
+            <tr class="" id="data-1">
+              <td>5</td>
+              <td class="text-left pl-4 bold">
+
+                <span class="up"></span>
+
+                HLT [S]
+              </td>
+              <td>0188</td>
+              <td class="nowrap"></td>
+              <td>
+
+                0.875
+
+              </td>
+              <td>0.585</td>
+              <td class="text-dark">
+                <div class="stock_change text-center bold text-success">
+                  +0.290
+                </div>
+              </td>
+              <td class="text-dark">
+                <div class="text-center bold text-success">
+                  +49.57
+                </div>
+              </td>
+              <td>1,466,621</td>
+              <td>5,136</td>
+              <td>0.875</td>
+              <td>0.880</td>
+              <td>5,535</td>
+              <td>
+
+                0.880
+
+              </td>
+              <td>
+
+                0.635
+
+              </td>
+
+              <td class="stock-id hidden">0188</td>
+            </tr>
+
+
+            <tr class="" id="data-1">
+              <td>6</td>
+              <td class="text-left pl-4 bold">
+
+                <span class="up"></span>
+
+                BCMALL [S]
+              </td>
+              <td>0187</td>
+              <td class="nowrap"></td>
+              <td>
+
+                0.270
+
+              </td>
+              <td>0.225</td>
+              <td class="text-dark">
+                <div class="stock_change text-center bold text-success">
+                  +0.045
+                </div>
+              </td>
+              <td class="text-dark">
+                <div class="text-center bold text-success">
+                  +20.00
+                </div>
+              </td>
+              <td>1,220,531</td>
+              <td>20,245</td>
+              <td>0.270</td>
+              <td>0.275</td>
+              <td>7,435</td>
+              <td>
+
+                0.285
+
+              </td>
+              <td>
+
+                0.230
+
+              </td>
+
+              <td class="stock-id hidden">0187</td>
+            </tr>
+
+
+            <tr class="" id="data-1">
+              <td>7</td>
+              <td class="text-left pl-4 bold">
+
+                <span class="up"></span>
+
+                FINTEC
+              </td>
+              <td>0150</td>
+              <td class="nowrap"></td>
+              <td>
+
+                0.065
+
+              </td>
+              <td>0.050</td>
+              <td class="text-dark">
+                <div class="stock_change text-center bold text-success">
+                  +0.015
+                </div>
+              </td>
+              <td class="text-dark">
+                <div class="text-center bold text-success">
+                  +30.00
+                </div>
+              </td>
+              <td>1,123,747</td>
+              <td>309,935</td>
+              <td>0.060</td>
+              <td>0.065</td>
+              <td>202,891</td>
+              <td>
+
+                0.065
+
+              </td>
+              <td>
+
+                0.050
+
+              </td>
+
+              <td class="stock-id hidden">0150</td>
+            </tr>
+
+
+            <tr class="" id="data-1">
+              <td>8</td>
+              <td class="text-left pl-4 bold">
+
+                <span class="down"></span>
+
+                KGROUP [S]
+              </td>
+              <td>0036</td>
+              <td class="nowrap"></td>
+              <td>
+
+                0.065
+
+              </td>
+              <td>0.075</td>
+              <td class="text-dark">
+                <div class="stock_change text-center bold text-danger">
+                  -0.010
+                </div>
+              </td>
+              <td class="text-dark">
+                <div class="text-center bold text-danger">
+                  -13.33
+                </div>
+              </td>
+              <td>952,040</td>
+              <td>318,180</td>
+              <td>0.060</td>
+              <td>0.065</td>
+              <td>5,483</td>
+              <td>
+
+                0.075
+
+              </td>
+              <td>
+
+                0.060
+
+              </td>
+
+              <td class="stock-id hidden">0036</td>
+            </tr>
+
+
+            <tr class="" id="data-1">
+              <td>9</td>
+              <td class="text-left pl-4 bold">
+
+                <span class="up"></span>
+
+                KNM
+              </td>
+              <td>7164</td>
+              <td class="nowrap"></td>
+              <td>
+
+                0.220
+
+              </td>
+              <td>0.215</td>
+              <td class="text-dark">
+                <div class="stock_change text-center bold text-success">
+                  +0.005
+                </div>
+              </td>
+              <td class="text-dark">
+                <div class="text-center bold text-success">
+                  +2.33
+                </div>
+              </td>
+              <td>891,733</td>
+              <td>192,558</td>
+              <td>0.220</td>
+              <td>0.225</td>
+              <td>86,573</td>
+              <td>
+
+                0.225
+
+              </td>
+              <td>
+
+                0.215
+
+              </td>
+
+              <td class="stock-id hidden">7164</td>
+            </tr>
+
+
+            <tr class="" id="data-1">
+              <td>10</td>
+              <td class="text-left pl-4 bold">
+
+                <span class="down"></span>
+
+                DSONIC-WA [S]
+              </td>
+              <td>5216WA</td>
+              <td class="nowrap"></td>
+              <td>
+
+                0.585
+
+              </td>
+              <td>0.665</td>
+              <td class="text-dark">
+                <div class="stock_change text-center bold text-danger">
+                  -0.080
+                </div>
+              </td>
+              <td class="text-dark">
+                <div class="text-center bold text-danger">
+                  -12.03
+                </div>
+              </td>
+              <td>871,759</td>
+              <td>5,255</td>
+              <td>0.585</td>
+              <td>0.590</td>
+              <td>490</td>
+              <td>
+
+                0.670
+
+              </td>
+              <td>
+
+                0.545
+
+              </td>
+
+              <td class="stock-id hidden">5216WA</td>
+            </tr>
+
+
+            <tr class="" id="data-1">
+              <td>11</td>
+              <td class="text-left pl-4 bold">
+
+                <span class="up"></span>
+
+                JAG [S]
+              </td>
+              <td>0024</td>
+              <td class="nowrap"></td>
+              <td>
+
+                0.070
+
+              </td>
+              <td>0.065</td>
+              <td class="text-dark">
+                <div class="stock_change text-center bold text-success">
+                  +0.005
+                </div>
+              </td>
+              <td class="text-dark">
+                <div class="text-center bold text-success">
+                  +7.69
+                </div>
+              </td>
+              <td>794,954</td>
+              <td>219,551</td>
+              <td>0.070</td>
+              <td>0.075</td>
+              <td>54,219</td>
+              <td>
+
+                0.080
+
+              </td>
+              <td>
+
+                0.070
+
+              </td>
+
+              <td class="stock-id hidden">0024</td>
+            </tr>
+
+
+            <tr class="" id="data-1">
+              <td>12</td>
+              <td class="text-left pl-4 bold">
+
+                <span class="up"></span>
+
+                K1-WC [S]
+              </td>
+              <td>0111WC</td>
+              <td class="nowrap"></td>
+              <td>
+
+                0.195
+
+              </td>
+              <td>0.140</td>
+              <td class="text-dark">
+                <div class="stock_change text-center bold text-success">
+                  +0.055
+                </div>
+              </td>
+              <td class="text-dark">
+                <div class="text-center bold text-success">
+                  +39.29
+                </div>
+              </td>
+              <td>750,483</td>
+              <td>12,488</td>
+              <td>0.195</td>
+              <td>0.200</td>
+              <td>37,756</td>
+              <td>
+
+                0.200
+
+              </td>
+              <td>
+
+                0.155
+
+              </td>
+
+              <td class="stock-id hidden">0111WC</td>
+            </tr>
+
+
+            <tr class="" id="data-1">
+              <td>13</td>
+              <td class="text-left pl-4 bold">
+
+                <span class="down"></span>
+
+                XOX [S]
+              </td>
+              <td>0165</td>
+              <td class="nowrap"></td>
+              <td>
+
+                0.075
+
+              </td>
+              <td>0.080</td>
+              <td class="text-dark">
+                <div class="stock_change text-center bold text-danger">
+                  -0.005
+                </div>
+              </td>
+              <td class="text-dark">
+                <div class="text-center bold text-danger">
+                  -6.25
+                </div>
+              </td>
+              <td>725,724</td>
+              <td>325,995</td>
+              <td>0.070</td>
+              <td>0.075</td>
+              <td>391,572</td>
+              <td>
+
+                0.075
+
+              </td>
+              <td>
+
+                0.065
+
+              </td>
+
+              <td class="stock-id hidden">0165</td>
+            </tr>
+
+
+            <tr class="" id="data-1">
+              <td>14</td>
+              <td class="text-left pl-4 bold">
+
+                <span class="nochange"></span>
+
+                GPACKET
+              </td>
+              <td>0082</td>
+              <td class="nowrap"></td>
+              <td>
+
+                0.835
+
+              </td>
+              <td>0.835</td>
+              <td class="text-dark">
+                <div class="stock_change text-center">
+                  -
+                </div>
+              </td>
+              <td class="text-dark">
+                <div class="text-center">
+                  -
+                </div>
+              </td>
+              <td>713,623</td>
+              <td>2,214</td>
+              <td>0.835</td>
+              <td>0.840</td>
+              <td>1,880</td>
+              <td>
+
+                0.920
+
+              </td>
+              <td>
+
+                0.835
+
+              </td>
+
+              <td class="stock-id hidden">0082</td>
+            </tr>
+
+
+            <tr class="" id="data-1">
+              <td>15</td>
+              <td class="text-left pl-4 bold">
+
+                <span class="up"></span>
+
+                ESCERAM
+              </td>
+              <td>0100</td>
+              <td class="nowrap"></td>
+              <td>
+
+                0.605
+
+              </td>
+              <td>0.465</td>
+              <td class="text-dark">
+                <div class="stock_change text-center bold text-success">
+                  +0.140
+                </div>
+              </td>
+              <td class="text-dark">
+                <div class="text-center bold text-success">
+                  +30.11
+                </div>
+              </td>
+              <td>674,845</td>
+              <td>1,307</td>
+              <td>0.600</td>
+              <td>0.605</td>
+              <td>1,681</td>
+              <td>
+
+                0.630
+
+              </td>
+              <td>
+
+                0.495
+
+              </td>
+
+              <td class="stock-id hidden">0100</td>
+            </tr>
+
+
+            <tr class="" id="data-1">
+              <td>16</td>
+              <td class="text-left pl-4 bold">
+
+                <span class="up"></span>
+
+                SANICHI
+              </td>
+              <td>0133</td>
+              <td class="nowrap"></td>
+              <td>
+
+                0.110
+
+              </td>
+              <td>0.105</td>
+              <td class="text-dark">
+                <div class="stock_change text-center bold text-success">
+                  +0.005
+                </div>
+              </td>
+              <td class="text-dark">
+                <div class="text-center bold text-success">
+                  +4.76
+                </div>
+              </td>
+              <td>669,122</td>
+              <td>121,270</td>
+              <td>0.105</td>
+              <td>0.110</td>
+              <td>4,209</td>
+              <td>
+
+                0.120
+
+              </td>
+              <td>
+
+                0.105
+
+              </td>
+
+              <td class="stock-id hidden">0133</td>
+            </tr>
+
+
+            <tr class="" id="data-1">
+              <td>17</td>
+              <td class="text-left pl-4 bold">
+
+                <span class="up"></span>
+
+                SANICHI-WE
+              </td>
+              <td>0133WE</td>
+              <td class="nowrap"></td>
+              <td>
+
+                0.020
+
+              </td>
+              <td>0.010</td>
+              <td class="text-dark">
+                <div class="stock_change text-center bold text-success">
+                  +0.010
+                </div>
+              </td>
+              <td class="text-dark">
+                <div class="text-center bold text-success">
+                  +100.00
+                </div>
+              </td>
+              <td>666,999</td>
+              <td>202,129</td>
+              <td>0.015</td>
+              <td>0.020</td>
+              <td>213,864</td>
+              <td>
+
+                0.020
+
+              </td>
+              <td>
+
+                0.015
+
+              </td>
+
+              <td class="stock-id hidden">0133WE</td>
+            </tr>
+
+
+            <tr class="" id="data-1">
+              <td>18</td>
+              <td class="text-left pl-4 bold">
+
+                <span class="up"></span>
+
+                VELESTO [S]
+              </td>
+              <td>5243</td>
+              <td class="nowrap"></td>
+              <td>
+
+                0.160
+
+              </td>
+              <td>0.155</td>
+              <td class="text-dark">
+                <div class="stock_change text-center bold text-success">
+                  +0.005
+                </div>
+              </td>
+              <td class="text-dark">
+                <div class="text-center bold text-success">
+                  +3.23
+                </div>
+              </td>
+              <td>660,589</td>
+              <td>606,678</td>
+              <td>0.155</td>
+              <td>0.160</td>
+              <td>39,030</td>
+              <td>
+
+                0.165
+
+              </td>
+              <td>
+
+                0.155
+
+              </td>
+
+              <td class="stock-id hidden">5243</td>
+            </tr>
+
+
+            <tr class="" id="data-1">
+              <td>19</td>
+              <td class="text-left pl-4 bold">
+
+                <span class="down"></span>
+
+                DSONIC [S]
+              </td>
+              <td>5216</td>
+              <td class="nowrap"></td>
+              <td>
+
+                1.310
+
+              </td>
+              <td>1.510</td>
+              <td class="text-dark">
+                <div class="stock_change text-center bold text-danger">
+                  -0.200
+                </div>
+              </td>
+              <td class="text-dark">
+                <div class="text-center bold text-danger">
+                  -13.25
+                </div>
+              </td>
+              <td>653,047</td>
+              <td>2,906</td>
+              <td>1.310</td>
+              <td>1.320</td>
+              <td>821</td>
+              <td>
+
+                1.540
+
+              </td>
+              <td>
+
+                1.230
+
+              </td>
+
+              <td class="stock-id hidden">5216</td>
+            </tr>
+
+
+            <tr class="" id="data-1">
+              <td>20</td>
+              <td class="text-left pl-4 bold">
+
+                <span class="up"></span>
+
+                HUBLINE [S]
+              </td>
+              <td>7013</td>
+              <td class="nowrap"></td>
+              <td>
+
+                0.060
+
+              </td>
+              <td>0.055</td>
+              <td class="text-dark">
+                <div class="stock_change text-center bold text-success">
+                  +0.005
+                </div>
+              </td>
+              <td class="text-dark">
+                <div class="text-center bold text-success">
+                  +9.09
+                </div>
+              </td>
+              <td>615,792</td>
+              <td>242,420</td>
+              <td>0.055</td>
+              <td>0.060</td>
+              <td>199,711</td>
+              <td>
+
+                0.060
+
+              </td>
+              <td>
+
+                0.050
+
+              </td>
+
+              <td class="stock-id hidden">7013</td>
+            </tr>
+
+          </tbody>
+        </table>
+
+        <div class="col-2 offset-5 equity_prices_table_loader" style="display: none;">
+          <i class="fa fa-spinner fa-spin"></i>
+        </div>
+
+
+        <!-- To use your snippet, just add the following code in your page template-->
+        <!-- {% include table_footer %} -->
+
+
+
+
+
+        <div class="row mt-2 no-gutters">
+
+          <div class="col-sm-12 col-lg-3">
+            <div class="dataTables_length custom_footer_dataTables_length" id="DataTables_Table_0_length">
+              <label>
+                Show
+                <select name="DataTables_Table_0_length" aria-controls="DataTables_Table_0"
+                  class="custom-select custom-select-sm form-control form-control-sm">
+                  <option value="10">10</option>
+                  <option value="20" selected="">20</option>
+                  <option value="50">50</option>
+                </select>
+                entries
+              </label>
+            </div>
+          </div>
+
+          <div class="col-sm-12 col-lg-4 text-lg-center">
+            <div class="dataTables_info" id="DataTables_Table_0_info" role="status" aria-live="polite">
+              Showing
+
+              1
+              to
+
+              20
+              of 1868 entries
+            </div>
+          </div>
+
+
+
+
+
+
+          <div class="col-sm-12 col-lg-5  text-left text-lg-right">
+            <div class="dataTables_paginate paging_simple_numbers custom" id="DataTables_Table_0_paginate">
+              <ul class="pagination">
+                <li class="paginate_button page-item previous disabled" id="DataTables_Table_0_previous">
+                  <a data-val="0" href="#" aria-controls="DataTables_Table_0" data-dt-idx="0" tabindex="0"
+                    class="page-link footer-page-link"><i class="fas fa-angle-left"></i></a>
+                </li>
+
+
+
+
+
+
+
+
+
+
+
+
+                <li class="paginate_button page-item active">
+                  <a data-val=1 href="#" aria-controls="DataTables_Table_0" data-dt-idx="1" tabindex="0"
+                    class="page-link footer-page-link">1</a>
+                </li>
+
+
+
+
+
+                <li class="paginate_button page-item ">
+                  <a data-val=2 href="#" aria-controls="DataTables_Table_0" data-dt-idx="1" tabindex="0"
+                    class="page-link footer-page-link">2</a>
+                </li>
+
+
+
+
+                <li class="paginate_button page-item disabled">
+                  <a href="#" aria-controls="DataTables_Table_0" data-dt-idx="1" tabindex="0"
+                    class="page-link footer-disable-link">…</a>
+                </li>
+                <li class="paginate_button page-item">
+                  <a data-val=94 href="#" aria-controls="DataTables_Table_0" data-dt-idx="1" tabindex="0"
+                    class="page-link footer-page-link">94</a>
+                </li>
+
+
+                <li class="paginate_button page-item next " id="DataTables_Table_0_next">
+                  <a data-val="2" href="#" aria-controls="DataTables_Table_0" data-dt-idx="2" tabindex="0"
+                    class="page-link footer-page-link"><i class="fas fa-angle-right"></i></a>
+                </li>
+                <li id="total_page" data-val=94 style="display:none;"></li>
+              </ul>
+            </div>
+            <div class="to_page_input_wrapper">
+              <div class="input-group ">
+                <input type="text" class="to_page_input bm_cur_page_input form-control">
+                <div class="input-group-append">
+                  <button class="go_page btn-sm btn-primary" type="submit">GO</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+      </div>
+      <div class="bm_footnote bm_legend">
+        <div><strong>Legend</strong></div>
+        <ul class="row list-unstyled">
+          <li class="col-12 col-md-4 mb-1"><strong class="text-danger">I</strong> refers to Order entry forbidden</li>
+          <li class="col-12 col-md-4 mb-1"><strong class="text-danger">A</strong> refers to Order entry authorized</li>
+          <li class="col-12 col-md-4 mb-1"><strong class="text-danger">G</strong> refers to Frozen</li>
+          <li class="col-12 col-md-4 mb-1"><strong class="text-danger">S</strong> refers to Suspended</li>
+          <li class="col-12 col-md-4 mb-1"><strong class="text-danger">R</strong> refers to Reserved</li>
+          <li class="col-12 col-md-4 mb-1"><strong class="text-danger">s</strong> refers to Short selling available</li>
+          <li class="col-12 col-md-4 mb-1"><strong class="text-danger">[x]</strong> refers to Exclude dividend</li>
+          <li class="col-12 col-md-4 mb-1"><strong class="text-danger">[c]</strong> refers to Cum dividend</li>
+          <li class="col-12 col-md-4 mb-1"><strong class="text-danger">[Space]</strong> refers to instrument open, or
+            not provided</li>
+          <li class="col-12 col-md-4 mb-1"><strong class="text-danger">[S]</strong> refers to Shariah Compliant stocks
+          </li>
+          <li class="col-12 col-md-4 mb-1"><strong class="text-danger">LACP</strong> refers to closing price from the
+            previous trading day with the possibility of adjustment (for example, resulting from dividends payment or
+            bonus issuance). For new listings, LACP represents the listing price</li>
+          <li class="col-12 col-md-4 mb-1"><strong class="text-danger">[USD]</strong> refers to USD denominated security
+          </li>
+        </ul>
+      </div>
+    </section>
+
+
+  </div><!-- /main-block -->
+
+
+
+
+  <!-- To use your snippet, just add the following code in your page template-->
+  <!-- {% include footer %} -->
+  <!-- {% include polling %} #move this outside raw to make it work -->
+
+
+
+  <!-- To use your snippet, just add the following code in your page template-->
+  <!-- {% include polling %} -->
+
+
+
+
+  <!-- https://docs.google.com/forms/d/e/1FAIpQLScu2yz9cHh67uBEGAt_BuFt_kug02CHqYLvmthmezUrbWWtLA/viewform?embedded=true -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-md-2">
+          <nav class="nav flex-column">
+            <a class="nav-link" href="/about_bursa/about_us">
+              About Bursa
+            </a>
+            <a class="nav-link" href="/market_information/equities_prices">
+              Market Information
+            </a>
+            <a class="nav-link" href="/trade/market/securities_market">
+              Trade
+            </a>
+            <a class="nav-link" href="/listing/why_bursa_malaysia/your_listing_destination">
+              Listing
+            </a>
+
+            <a class="nav-link" href="/regulation">
+              Regulation
+            </a>
+            <a class="nav-link" href="/reference">
+              Reference
+            </a>
+          </nav>
+        </div>
+        <div class="col-sm-6 col-md-2">
+          <nav class="nav flex-column">
+            <a class="nav-link" href="#" data-toggle="modal" data-target="#bursamarketplace_modal">
+              Bursa Marketplace
+            </a>
+            <a class="nav-link" href="https://link.bursamalaysia.com/BursaLinkWeb/sso_security/login.jsp"
+              data-toggle="modal" data-target="#bursalink_modal">
+              Bursa Link
+            </a>
+            <a class="nav-link" href="/trade/market/labuan_international_financial_exchange">
+              LFX
+            </a>
+            <a class="nav-link" href="#" data-toggle="modal" data-target="#asklistingbursa_modal">
+              AskListing@Bursa
+            </a>
+            <a class="nav-link" href="https://bursasustain.bursamalaysia.com/" data-toggle="modal"
+              data-target="#bursasustain_modal">
+              Bursa SUSTAIN
+            </a>
+          </nav>
+        </div>
+        <div class="col-sm-6 col-md-2">
+          <nav class="nav flex-column">
+            <a class="nav-link" href="/term_conditions_of_use_disclaimer_and_linking_policy">
+              Terms & Conditions of Use, Disclaimer and Linking Policy
+            </a>
+            <a class="nav-link" href="/personal_data_notice">
+              Personal Data Notice
+            </a>
+            <a class="nav-link" href="/sitemap">
+              Sitemap
+            </a>
+            <a class="nav-link" href="/website_faqs">
+              Website FAQs
+            </a>
+          </nav>
+        </div>
+        <div class="col-sm-6 col-md-3">
+          <nav class="nav flex-column">
+            <!-- <div class="nav-link" href="#">
+            General: (603) 2034 7000 | (603) 2332 7000
+          </div>
+          <div class="nav-link" href="#">
+            Fax (603) 2732 5258
+          </div>
+          <div class="nav-link" href="#">
+            Customer Service: (603) 2026 4122
+          </div> -->
+            <a class="nav-link" href="/contact_us">
+              Contact Us
+            </a>
+            <a class="nav-link" href="http://customer.bursamalaysia.com/" data-toggle="modal"
+              data-target="#helpcentre_modal">
+              Help Centre
+            </a>
+          </nav>
+        </div>
+        <div class="col-sm-6 col-md-3 align-self-end">
+          <nav class="nav social-links mt-xs-3 justify-content-md-end justify-content-start float-left float-md-right"
+            id="social-links">
+            <a class="nav-link" href="https://facebook.com/BursaMalaysiaBerhad/ ">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a class="nav-link" href="https://twitter.com/BursaMalaysiaKL">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a class="nav-link" href="#" data-toggle="modal" data-target="#rssModal">
+              <i class="fas fa-rss"></i>
+            </a>
+          </nav>
+          <div class="modal fade" id="rssModal" tabindex="-1" role="dialog" aria-labelledby="rssModalSubscription"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="rssModalLabel">RSS Feeds</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p>Subscribe to our RSS feeds and get the latest Bursa Malaysia news delivered directly to your
+                    desktop.
+                    Click on the orange RSS button to go to the Subscribe page.</p>
+                  <p><strong>You will need to install the RSS plugin to subscribe to the RSS Feeds.</strong></p>
+                  <table>
+                    <thead>
+                      <tr>
+                        <th></th>
+                        <th>Subscribe</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Media Releases</td>
+                        <td><a href="/media-releases-rss.rss" class="rss-subscribe-link">Subscribe</a></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Investor Relations
+                          <ul>
+                            <li>Newsroom</li>
+                          </ul>
+                        </td>
+                        <td><a href="https://bursa.listedcompany.com/newsroom_rss.html"
+                            class="rss-subscribe-link">Subscribe</a></td>
+                      </tr>
+                      <tr>
+                        <td>Bursa Malaysia Listing Requirements
+                          <ul>
+                            <li>Main Market</li>
+                            <li>ACE Market</li>
+                          </ul>
+                        </td>
+                        <td><a href="/bursa-listing-requirements-main-rss.rss" class="rss-subscribe-link">Subscribe</a>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Initial Public Offering</td>
+                        <td><a href="/ipo-rss.rss" class="rss-subscribe-link">Subscribe</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <div class="container">
+        Copyright © 2020 Bursa Malaysia Berhad 197601004668 (30632-P). All rights reserved.
+      </div>
+    </div>
+    <a href="#" id="scroll" style="display: none;"><i class="fa fa-angle-up"></i><span>Top</span></a>
+  </footer>
+  <script>
+    window.addEventListener("load", function () {
+      window.cookieconsent.initialise({
+        "palette": {
+          "popup": {
+            "background": "#162077",
+            "text": "#ffffff"
+          },
+          "button": {
+            "background": "transparent",
+            "text": "#ffffff",
+            "border": "#ffffff"
+          }
+        },
+        "showLink": false,
+        "content": {
+          "message": "We use cookies to give you the best experience on our Website. By continuing to use our Website, you agree to the use of cookies to help us understand how you use the Website. You may change your cookie settings through your browser.",
+          "dismiss": "Close"
+        },
+        "cookie": {
+          //"expiryDays": 365 // default is 365 days , change if required
+        }
+
+      })
+    });
+  </script>
+
+
+
+
+
+
+  <script type="text/javascript" src="/assets/bursaweb.js?v=2"></script>
+
+
+
+
+
+
+
+
+  <script defer type="text/javascript" src="/assets/price_tables.js?v=2"></script>
+
+
+
+
+
+  <script defer type="text/javascript" src="/bursaweb/assets/app.js?v=12"></script>
+
+
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      if (RegExp('multipage', 'gi').test(window.location.search)) {
+        setTimeout(function () {  //show company sneakpeak (0.5sec to load the datatable)
+
+          $('#data-1').click();
+        }, 500);
+        existCondition;
+      }
+    });
+
+    var existCondition = setInterval(function () {  // check if the sneakpeak exist then call intro
+      if ($('#DataTables_Table_0 > tbody > tr.odd.company-info').length) {
+        clearInterval(existCondition);
+        if (RegExp('multipage', 'gi').test(window.location.search)) {
+          startIntro();
+        }
+      }
+    }, 100);
+
+    function startIntro() {
+      var intro = introJs();
+      intro.setOptions({
+        steps: [
+          {
+            element: document.querySelector('#DataTables_Table_0 > tbody > tr.odd.company-info'),
+            intro: "Click on any stock for quick access to more information."
+          }
+        ],
+        showBullets: false,
+        scrollTo: 'tooltip',
+        disableInteraction: true,
+        showStepNumbers: false
+      });
+
+      intro.setOption('doneLabel', 'Next page').oncomplete(function () {
+        window.location.href = '/trade/trading_resources/listing_directory/company-profile?stock_code=1818&multipage=true';
+      });
+      intro.start();
+    }
+
+  </script>
+
+</body>
+
+
+<!-- To use your snippet, just add the following code in your page template-->
+<!-- {% include main_style %} -->
+
+
+<style>
+  #knowledge {
+    background-image: url(/sites/5bb54be15f36ca0af339077a/theme/images/geometric-bg3.png?1590549628);
+  }
+
+  #about {
+    background-image: url(/sites/5bb54be15f36ca0af339077a/theme/images/geometric-bg2.png?1590549628);
+  }
+</style>
+
+</html>
