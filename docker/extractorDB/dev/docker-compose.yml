@@ -1,0 +1,13 @@
+version: "3.8"
+
+services: 
+  extractor_db:
+    env_file: ../../../extractor/environment/dev.env
+    image: couchdb:latest
+    volumes: 
+      - extractor_db_data:/opt/couchdb/data
+    ports: 
+      - "5984:5984"
+
+volumes: 
+  extractor_db_data:
