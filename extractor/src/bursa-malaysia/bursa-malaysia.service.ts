@@ -1,8 +1,6 @@
 import { Injectable, Logger, HttpException, HttpStatus } from '@nestjs/common';
 import cheerio = require('cheerio');
 import Axios from 'axios';
-import { eq } from 'fp-ts';
-import { eqOrdering } from 'fp-ts/lib/Ordering';
 
 
 @Injectable()
