@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "extractor"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"deno.enable": false
+	}
+}
