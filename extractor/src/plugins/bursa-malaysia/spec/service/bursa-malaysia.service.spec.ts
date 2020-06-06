@@ -22,7 +22,7 @@ describe('BursaMalaysiaService', () => {
 
 
     it('Get total max number page, so must be integer type', async () => {
-      const filePath = join(cwd(), 'src', 'bursa-malaysia', 'spec', 'spec_data', 'equities_prices.html')
+      const filePath = join(cwd(), 'src','plugins', 'bursa-malaysia', 'spec', 'spec_data', 'equities_prices.html')
       const htmlPage = await promises.readFile(filePath);
       const $ = cheerio.load(htmlPage);
       const maxPage: number = await service.getTotalPage($);
@@ -36,7 +36,7 @@ describe('BursaMalaysiaService', () => {
     })
 
     it('Should return all the company code in the page ', async () => {
-      const filePath = join(cwd(), 'src', 'bursa-malaysia', 'spec', 'spec_data', 'equities_prices.html')
+      const filePath = join(cwd(), 'src','plugins', 'bursa-malaysia', 'spec', 'spec_data', 'equities_prices.html')
       const htmlPage = await promises.readFile(filePath);
       const $ = cheerio.load(htmlPage);
       const listOfCompanyCode = await service.extractCompanyCodesInThePage($);
@@ -58,7 +58,7 @@ describe('BursaMalaysiaService', () => {
     describe('Page is still valid test', () => {
       let $: CheerioStatic;
       beforeAll(async () => {
-        const filePath = join(cwd(), 'src', 'bursa-malaysia', 'spec', 'spec_data', 'equities_prices.html')
+        const filePath = join(cwd(), 'src','plugins', 'bursa-malaysia', 'spec', 'spec_data', 'equities_prices.html')
         const htmlPage = await promises.readFile(filePath);
         $ = cheerio.load(htmlPage);
       })
@@ -74,7 +74,7 @@ describe('BursaMalaysiaService', () => {
     describe('Page is not valid', () => {
       let $: CheerioStatic;
       beforeAll(async () => {
-        const filePath = join(cwd(), 'src', 'bursa-malaysia', 'spec', 'spec_data', 'equities_prices_fail.html')
+        const filePath = join(cwd(), 'src','plugins', 'bursa-malaysia', 'spec', 'spec_data', 'equities_prices_fail.html')
         const htmlPage = await promises.readFile(filePath);
         $ = cheerio.load(htmlPage);
       })
@@ -85,9 +85,6 @@ describe('BursaMalaysiaService', () => {
       })
     })
   
-
-    
-      
   })
 
 });
