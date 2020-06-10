@@ -1,7 +1,7 @@
 import { Injectable, Logger, HttpException, HttpStatus } from '@nestjs/common';
 import cheerio = require('cheerio');
 import Axios from 'axios';
-
+import { filter, map, forEach } from 'ramda';
 
 @Injectable()
 export class BursaMalaysiaService {
@@ -77,12 +77,13 @@ export class BursaMalaysiaService {
      */
     public async extractCompanyCodesInThePage($: CheerioStatic): Promise<string[]> {
         const listOfRows = $('td.stock-id').toArray();
-        const listOfCompanyCodeInThisPage: string[] = [];
-        for (let rowIndex = 0; rowIndex < listOfRows.length; rowIndex++) {
-            const row$ = listOfRows[rowIndex];
-            const companyCode = row$.children[0].data;
-            listOfCompanyCodeInThisPage.push(companyCode);
+        
+        const extractCompanyCodeFromRow = (row: CheerioElement) => {
+            return row.children[0].data;
         }
+
+        const listOfCompanyCodeInThisPage = map(extractCompanyCodeFromRow, listOfRows);
+
         return listOfCompanyCodeInThisPage;
     }
 
@@ -92,17 +93,19 @@ export class BursaMalaysiaService {
      * @param $ Equities Price Page Cheerio Static
      */
     public validateTableHeaderOfEquityPricePage($: CheerioStatic) {
-        const extractedTableHeader = $('table.equity_prices_table > thead > tr')
-            .toArray()[0]
-            .children
-            .filter(trElement => trElement.name === "th")
-            .map(thElement => 
-                 thElement.children.map(child => child.data)[0]
-            )
+        const isTableHeader = (tableRow: CheerioElement) => tableRow.name === 'th';
         
-        // looping thru extracted Table header and the one should be. If mismatch return false.
-        for (let headerIndix = 0; headerIndix < extractedTableHeader.length; headerIndix++) {
-            const extractedHeader = extractedTableHeader[headerIndix]
+        const getTextFromTableHeader = (thElement: CheerioElement) => {
+            return thElement.children.map(child => child.data)[0]
+        }
+
+        const childrenOfTableRow = $('table.equity_prices_table > thead > tr').toArray()[0].children
+        const tableHeader = filter(isTableHeader, childrenOfTableRow);
+        const foundHeaderTexts = map(getTextFromTableHeader, tableHeader);
+           
+
+        for (let headerIndix = 0; headerIndix < foundHeaderTexts.length; headerIndix++) {
+            const extractedHeader = foundHeaderTexts[headerIndix]
                 .toLowerCase();
             
             const shouldBeHeader = this.EQUITIES_PRICE_HEADER[headerIndix]
