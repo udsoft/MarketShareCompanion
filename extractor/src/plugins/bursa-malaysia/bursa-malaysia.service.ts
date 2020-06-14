@@ -1,11 +1,11 @@
 import { Injectable, Logger, HttpException, HttpStatus } from '@nestjs/common';
 import cheerio = require('cheerio');
 import Axios from 'axios';
-import { filter, map, forEach, } from 'ramda';
+import { filter, map } from 'ramda';
 import { BasicHelperService } from '@app/basic-helper';
-
+import {ExtractorPlugin} from '../../extractor-plugin.interface'
 @Injectable()
-export class BursaMalaysiaService {
+export class BursaMalaysiaService implements ExtractorPlugin{
     log = new Logger(BursaMalaysiaService.name);
     private readonly HOMEPAGE_URL: URL = new URL('https://www.bursamalaysia.com');
     private readonly EQUITIES_PRICE_URL: URL = new URL('https://www.bursamalaysia.com/market_information/equities_prices');
@@ -18,7 +18,19 @@ export class BursaMalaysiaService {
     ];
     private readonly TITLE = 'Equities Prices';
 
-    constructor(private readonly basicHelper:BasicHelperService){}
+    constructor(private readonly basicHelper: BasicHelperService) { }
+    
+    preRun() {
+        
+    }
+
+    run() {
+        
+    }
+
+    postRun() {
+        
+    }
 
     public async getAllStockCodes() {
         //1. load the main equity page
