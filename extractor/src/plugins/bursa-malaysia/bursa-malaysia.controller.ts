@@ -7,6 +7,6 @@ export class BursaMalaysiaController {
 
     @Get('companies') 
     async getAllListOfCompanies() {
-        this.bursaService.getAllStockCodes();
+        return await this.bursaService.getAllStockCodes();
     }
 }
