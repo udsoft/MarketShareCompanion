@@ -5,6 +5,7 @@ import { promises } from 'fs';
 import { cwd } from 'process';
 import { join } from 'path';
 import { HttpException } from '@nestjs/common';
+import { BasicHelperModule } from '@app/basic-helper';
 
 describe('BursaMalaysiaService', () => {
   let service: BursaMalaysiaService;
@@ -12,7 +13,7 @@ describe('BursaMalaysiaService', () => {
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
       providers: [BursaMalaysiaService],
-      imports: []
+      imports: [BasicHelperModule]
     }).compile();
 
     service = module.get<BursaMalaysiaService>(BursaMalaysiaService);

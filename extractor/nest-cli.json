@@ -1,4 +1,18 @@
 {
   "collection": "@nestjs/schematics",
-  "sourceRoot": "src"
+  "sourceRoot": "src",
+  "projects": {
+    "basic-helper": {
+      "type": "library",
+      "root": "libs/basic-helper",
+      "entryFile": "index",
+      "sourceRoot": "libs/basic-helper/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/basic-helper/tsconfig.lib.json"
+      }
+    }
+  },
+  "compilerOptions": {
+    "webpack": true
+  }
 }

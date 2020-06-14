@@ -1,7 +1,8 @@
 import { Injectable, Logger, HttpException, HttpStatus } from '@nestjs/common';
 import cheerio = require('cheerio');
 import Axios from 'axios';
-
+import { filter, map, forEach, } from 'ramda';
+import { BasicHelperService } from '@app/basic-helper';
 
 @Injectable()
 export class BursaMalaysiaService {
@@ -17,28 +18,33 @@ export class BursaMalaysiaService {
     ];
     private readonly TITLE = 'Equities Prices';
 
+    constructor(private readonly basicHelper:BasicHelperService){}
+
     public async getAllStockCodes() {
         //1. load the main equity page
         const $mainEquity = await this.loadPageAsCheerio(this.EQUITIES_PRICE_URL)
+
         //2. get the total page\
         const totalPage = this.getTotalPage($mainEquity);
-        //3. from each page extract the codes
-        const pagesURLs = Array(totalPage)
-            .fill(0)
-            .map((e, i) => {
-                const pageNumber = i + 1;
-                return pageNumber;
-            })
+
+        const pagesURLs = this.basicHelper
+            .getFilledArrayWithIncrementalNumber(totalPage)
             .map(pageNumber => {
                 return this.getEquityPriceUrlForGivenPageNumber(pageNumber)
             })
+        
+        const getCompanyCodes = async (url: URL) => {
+            const $page = await this.loadPageAsCheerio(url);
+            return await this.extractCompanyCodesInThePage($page);
+        }
 
-        pagesURLs.forEach(async (pageURL) => {
-            const $page = await this.loadPageAsCheerio(pageURL);
-            const stockCodesInPage = this.extractCompanyCodesInThePage($page);
-
-        })
-
+        // TODO Derive this to make saving to the database at each function call of getCompanyCodes.
+        let companyCode: string[] = []
+        for (let index = 0; index < pagesURLs.length; index++) {
+            const url = pagesURLs[index];
+            companyCode = companyCode.concat(await getCompanyCodes(url));
+        }
+        console.log(companyCode);
     }
 
     /**
@@ -77,12 +83,13 @@ export class BursaMalaysiaService {
      */
     public async extractCompanyCodesInThePage($: CheerioStatic): Promise<string[]> {
         const listOfRows = $('td.stock-id').toArray();
-        const listOfCompanyCodeInThisPage: string[] = [];
-        for (let rowIndex = 0; rowIndex < listOfRows.length; rowIndex++) {
-            const row$ = listOfRows[rowIndex];
-            const companyCode = row$.children[0].data;
-            listOfCompanyCodeInThisPage.push(companyCode);
+        
+        const extractCompanyCodeFromRow = (row: CheerioElement) => {
+            return row.children[0].data;
         }
+
+        const listOfCompanyCodeInThisPage = map(extractCompanyCodeFromRow, listOfRows);
+
         return listOfCompanyCodeInThisPage;
     }
 
@@ -92,17 +99,19 @@ export class BursaMalaysiaService {
      * @param $ Equities Price Page Cheerio Static
      */
     public validateTableHeaderOfEquityPricePage($: CheerioStatic) {
-        const extractedTableHeader = $('table.equity_prices_table > thead > tr')
-            .toArray()[0]
-            .children
-            .filter(trElement => trElement.name === "th")
-            .map(thElement => 
-                 thElement.children.map(child => child.data)[0]
-            )
+        const isTableHeader = (tableRow: CheerioElement) => tableRow.name === 'th';
         
-        // looping thru extracted Table header and the one should be. If mismatch return false.
-        for (let headerIndix = 0; headerIndix < extractedTableHeader.length; headerIndix++) {
-            const extractedHeader = extractedTableHeader[headerIndix]
+        const getTextFromTableHeader = (thElement: CheerioElement) => {
+            return thElement.children.map(child => child.data)[0]
+        }
+
+        const tableRows = $('table.equity_prices_table > thead > tr').toArray()[0].children
+        const tableHeaders = filter(isTableHeader, tableRows);
+        const allHeaderTexts = map(getTextFromTableHeader, tableHeaders);
+           
+
+        for (let headerIndix = 0; headerIndix < allHeaderTexts.length; headerIndix++) {
+            const extractedHeader = allHeaderTexts[headerIndix]
                 .toLowerCase();
             
             const shouldBeHeader = this.EQUITIES_PRICE_HEADER[headerIndix]

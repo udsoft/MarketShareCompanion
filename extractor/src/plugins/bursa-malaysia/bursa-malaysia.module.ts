@@ -1,9 +1,10 @@
 import { Module, HttpModule } from '@nestjs/common';
 import { BursaMalaysiaService } from './bursa-malaysia.service';
 import { BursaMalaysiaController } from './bursa-malaysia.controller';
+import { BasicHelperModule } from '@app/basic-helper';
 
 @Module({
-  imports:[HttpModule],
+  imports:[HttpModule,BasicHelperModule],
   providers: [BursaMalaysiaService],
   controllers: [BursaMalaysiaController]
 })
