@@ -2,12 +2,13 @@ import { Injectable } from "@nestjs/common";
 
 @Injectable()
 export class CompanyProfileExtractor {
-    
+
     getCompanyFullName = ($: CheerioStatic) => {
         return $('.main-block section')
             .last()
             .find('.col-lg-3')
-            .find('h5').text()
+            .find('h5')
+            .text()
     }
 
     getMarket = ($: CheerioStatic) => {
@@ -16,12 +17,11 @@ export class CompanyProfileExtractor {
             .find('.col-lg-3')
             .find('div')
             .first()
-            .next().text()
+            .next()
+            .text()
             .split(':')[1]
             .trim();
     }
-
-
 
     getSector = ($: CheerioStatic) => {
         return $('.main-block section')
@@ -29,12 +29,9 @@ export class CompanyProfileExtractor {
             .find('.col-lg-3')
             .find('div')
             .first()
-            .next()
-            .next().text()
+            .next().next()
+            .text()
             .split(':')[1]
             .trim();
     }
-
-
-
 }
