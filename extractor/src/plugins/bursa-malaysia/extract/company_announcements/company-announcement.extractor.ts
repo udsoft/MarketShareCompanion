@@ -26,7 +26,9 @@ export class CompanyAnnouncementExtractor implements TableExtractor {
         return new URL(`https://www.bursamalaysia.com/market_information/announcements/company_announcement?company=${companyCode}&page=${pageNumber}&sort_by=${sortBy}&sort_dir=${sortDiretion}`);
     }
 
-    private basicCompanyAnnouncementURL = (companyCode:string) => new URL(`https://www.bursamalaysia.com/market_information/announcements/company_announcement?company=${companyCode}`);
+    private basicCompanyAnnouncementURL = (companyCode: string) => new URL(
+        `https://www.bursamalaysia.com/market_information/announcements/company_announcement?company=${companyCode}`
+    );
 
     private firstCompanyAnnouncementPage = async (companyCode: string) => {
         return await  this.basicHelper.loadPage(this.basicCompanyAnnouncementURL(companyCode));
