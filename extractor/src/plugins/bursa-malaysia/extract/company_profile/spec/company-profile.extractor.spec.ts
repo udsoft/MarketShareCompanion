@@ -61,14 +61,4 @@ describe('Company Profile Data Extraction', () => {
 
     })
 
-    describe('Test All should error cases', () => {
-
-
-    })
-
-
-
-
-
-
 })

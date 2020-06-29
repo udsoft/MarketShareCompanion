@@ -6,6 +6,7 @@ import { HttpException } from "@nestjs/common";
 import { EquityPageExtractor } from "../equity-page.extractor";
 import { BasicHelperModule } from "@app/basic-helper";
 import { TestingModule, Test } from "@nestjs/testing";
+import { SharedExtractor } from "../../shared/shared.extractor";
 
 
 describe('Equity Page Extractor', () => {
@@ -25,7 +26,7 @@ describe('Equity Page Extractor', () => {
     beforeEach(async () => {
 
         const module: TestingModule = await Test.createTestingModule({
-            providers: [EquityPageExtractor],
+            providers: [EquityPageExtractor,SharedExtractor],
             imports: [BasicHelperModule]
         }).compile()
 
@@ -34,13 +35,6 @@ describe('Equity Page Extractor', () => {
     });
 
     describe('Company code extraction testing', () => {
-
-        it('Get total max number page, so must be integer type', async () => {
-            const htmlPage = await promises.readFile(goodFilePath);
-            const $ = cheerio.load(htmlPage);
-            const maxPage: number = service.getTotalPage($);
-            expect(maxPage).toBe(94);
-        });
 
         it('Get correct next page url', () => {
             const nextPageURL = service.getEquityPriceUrlForGivenPageNumber(2).href;

@@ -1,5 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import Axios from 'axios';
+import cheerio = require('cheerio');
+
 
 @Injectable()
 export class BasicHelperService {
