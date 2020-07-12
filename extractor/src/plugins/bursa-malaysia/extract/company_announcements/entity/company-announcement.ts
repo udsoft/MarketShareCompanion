@@ -1,5 +1,5 @@
 export class CompanyAnnouncement {
-    date: number;
+    date: Date;
     companyName: string;
     newsUrl: URL;
 }

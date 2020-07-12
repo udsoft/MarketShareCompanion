@@ -125,7 +125,7 @@ export class CompanyAnnouncementExtractor implements TableExtractor {
 
                 const newAnnoucement: CompanyAnnouncement = {
                     companyName: trContent[2],
-                    date: new Date(trContent[1]).getTime(),
+                    date: new Date(trContent[1]),
                     newsUrl: new URL(`https://www.bursamalaysia.com${trContent[3]}`)
                 }
                 return newAnnoucement

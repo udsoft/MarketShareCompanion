@@ -51,7 +51,7 @@ describe('Extract Company Announcement', () => {
         it('should get all announcement from the page', async () => {
             const mockUpCompanyAnnouncement: CompanyAnnouncement =  {
                 companyName: "ANZO HOLDINGS BERHAD",
-                date: 1592323200000,
+                date: new Date('17 Jun 2020'),
                 newsUrl: new URL("https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=3059578")
             }
 
